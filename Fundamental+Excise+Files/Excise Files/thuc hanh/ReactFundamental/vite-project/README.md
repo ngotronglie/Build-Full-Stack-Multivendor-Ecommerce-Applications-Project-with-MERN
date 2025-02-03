@@ -10,3 +10,20 @@ Currently, two official plugins are available:
 
 -----------
 `npm create vite`
+
+-----------------------------
+## extension react
+
+Auto Close Tag
+Auto Import - ES6, TS, JSX, TSX
+Auto Rename Tag
+ESLint
+npm Intellisense
+Path Intellisense
+Postman
+Prettier - Code formatter
+Simple React Snippets
+Stylelint
+Tailwind CSS IntelliSense
+Thunder Client
+VSCode React Refactor
