@@ -1,18 +1,21 @@
 
-
+import Hero from './component/Hero';
+import Contact from './component/Contact';
 
 
 const App = () => {
-  const status = true;
+  const status = false;
   return (
     <div>
       <h1>This is from App</h1>
       {
         (() => {
           if (status == true) {
-            return <h2>True</h2>
+
+            return <Hero />
+
           } else {
-            return <h2>False</h2>
+            return <Contact />
           }
         })()
       }
