@@ -4,20 +4,25 @@
 
 
 const App = () => {
-  let marks = 80; 
+  let marks = 81; 
   return (
     <div>
-      <h1 style={{ color: "red" }}>Heading 1</h1>
-      <h2>{2 + 2}</h2>
-      <h3>{Math.random()}</h3>
-      <h3>{new Date().getTime()}</h3>
-      <br />
-      <input type="text" placeholder="Type something" />
-
-      <button>Submit</button>
-      {
-        marks >= 80 ? <h1> lon hon hoac bang 80</h1> : <h1>nho hon 80</h1>
+     {(
+      () => {
+        if (marks >= 80 && marks <= 100) {
+          return <h1>A+</h1>;
+        }
+        else if (marks >= 60 && marks <= 79) {
+          return <h1>A</h1>;
+        }
+        else if (marks >= 40 && marks <= 59) {
+          return <h1>B</h1>;
+        }
+        else {
+          return <h1>F</h1>;
+        }
       }
+     )()}
 
     </div>
   );
