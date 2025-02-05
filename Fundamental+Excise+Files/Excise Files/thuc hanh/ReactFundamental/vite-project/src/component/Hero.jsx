@@ -1,10 +1,12 @@
 
 import HerroImg from './HerroImg';
-const Hero = () => {
+const Hero = (props) => {
 
   return (
     <div className="flex items-center justify-center h-screen bg-gradient-to-r from-blue-500 to-purple-600 text-white">
       <h1 className="text-5xl font-bold ">This is from Hero</h1>
+      <h1>{props.title}</h1>
+      <h1>{props.des}</h1>
       <HerroImg />
     </div>
   );
