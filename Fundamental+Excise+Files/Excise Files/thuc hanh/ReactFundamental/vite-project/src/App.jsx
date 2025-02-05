@@ -7,7 +7,15 @@ const App = () => {
   return (
     <div>
       <h1>This is from App</h1>
-      {status ?? <button>logout</button>}
+      {
+        (() => {
+          if (status == true) {
+            return <h2>True</h2>
+          } else {
+            return <h2>False</h2>
+          }
+        })()
+      }
     </div>
   )
 }
