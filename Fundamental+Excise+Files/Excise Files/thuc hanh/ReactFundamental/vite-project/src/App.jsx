@@ -6,14 +6,10 @@ const App = () => {
   const status = true;
   return (
     <div>
-      {
-        status ? <button>true</button>
-          :
-          <button>false</button>
-      }
+      <h1>This is from App</h1>
+      {status ?? <button>logout</button>}
     </div>
   )
-
 }
 
 export default App;
