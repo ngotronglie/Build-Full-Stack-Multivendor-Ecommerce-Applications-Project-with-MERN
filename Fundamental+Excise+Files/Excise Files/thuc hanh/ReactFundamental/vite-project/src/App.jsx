@@ -4,16 +4,22 @@
 
 
 const App = () => {
-  let city = ['Dhaka', 'Chittagong', 'Khulna', 'Rajshahi', 'Sylhet', 'Barishal', 'Rangpur', 'Mymensingh'];
-  return (
-    <div>
-     <ul>
-      {city.map((item,i) => {
-        return <li key={i.toString()}>{item}</li>
-      })}
-     </ul>
-    </div>
-  );
+  const status = false;
+  if (status) {
+    return (
+      <div>
+        <h1>login status</h1>
+        <button>login</button>
+      </div>
+    );
+  } else {
+    return (
+      <div>
+        <h1>logout status</h1>
+        <button>logout</button>
+      </div>
+    );
+  }
 }
 
 export default App;
