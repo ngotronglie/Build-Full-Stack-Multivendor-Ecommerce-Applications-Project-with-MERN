@@ -6,17 +6,14 @@ import Hero from './component/Hero';
 
 const App = () => {
 
-  const itemObj = {
-    name: "Ngô Trọng Liêm",
-    age: 21,
-    city: "Hồ Chí Minh"
-  };
-
+  const BtnClick = () => {
+    alert('btn click')
+  }
 
   return (
     <div>
       <h1>This is from App</h1>
-      <Hero item={itemObj} />
+      <Hero item={BtnClick} />
     </div>
   )
 }
