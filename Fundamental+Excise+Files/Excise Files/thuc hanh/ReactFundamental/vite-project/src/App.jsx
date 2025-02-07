@@ -1,18 +1,25 @@
-import { Routes, Route } from 'react-router-dom';
-import HomePage from './pages/HomePage';
-import ContactPage from './pages/ContactPage';
-import AboutPage from './pages/AboutPage';
-import NotFoundPage from './pages/NotFoundPage';
+import { useRef } from 'react';
 
 const App = () => {
+
+  // let myHeadline = document.getElementById('myHeadline');
+  let myHeadline = useRef()
+
+
+  const change = () => {
+    myHeadline.current.innerHTML = 'xin chao, toi dang su dung useRef()';
+    // myHeadline.current.innerHTML = '<ul><li> A</li><li>B</li></ul >'
+  }
+
   return (
-    <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/contact" element={<ContactPage />} />
-      <Route path="/about/:id/:name" element={<AboutPage />} />
-      <Route path="*" element={<NotFoundPage />} />
-    </Routes>
+    <div>
+      {/* <h1 id="myHeadline"></h1> */}
+      <h1 ref={myHeadline}></h1>
+      {/* <h1 ref={(h1) => myHeadline = h1}></h1> bug khong fix dc */}
+      <button onClick={change}>Change! Click me</button>
+    </div>
   );
-};
+}
 
 export default App;
+
