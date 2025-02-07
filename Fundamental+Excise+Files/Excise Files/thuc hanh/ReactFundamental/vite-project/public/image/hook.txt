@@ -1,0 +1,8 @@
+React Hook
+- React Hook là một tính năng trong thư viện React, cho phép các lập trình viên sử dụng state và các tính năng khác của 
+React trong functional component, điều mà trước đây chỉ có thể thực hiện trong class component.
+- Tính năng này được giới thiệu từ React phiên bản 16.8.
+- Hooks có thể được sử dụng để quản lý state, xử lý các side effect, và truy cập các lifecycle method trong functional component.
+- Có nhiều Hook tích hợp sẵn trong React, như:
+    = useState, useEffect, useContext, useRef.
+- React Hook đã đơn giản hóa đáng kể quy trình phát triển ứng dụng với React và giúp viết mã dễ tái sử dụng và linh hoạt hơn.
