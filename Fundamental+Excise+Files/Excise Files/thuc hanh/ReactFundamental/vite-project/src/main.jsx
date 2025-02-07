@@ -8,6 +8,7 @@ import Header from './component/Header.jsx';
 // import Menu from './component/Menu';
 
 import './assets/css/style.css';
+// import Alert from './component/Alert';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -15,6 +16,7 @@ createRoot(document.getElementById('root')).render(
       <Header />
       {/* <Menu /> */}
       <App />
+      {/* <Alert />  */}
       <Demo />
       {/* <Hero /> */}
     </BrowserRouter>
