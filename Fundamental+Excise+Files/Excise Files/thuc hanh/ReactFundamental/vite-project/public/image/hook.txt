@@ -8,7 +8,12 @@ React trong functional component, điều mà trước đây chỉ có thể th�
 - React Hook đã đơn giản hóa đáng kể quy trình phát triển ứng dụng với React và giúp viết mã dễ tái sử dụng và linh hoạt hơn.
 
 Phương thức useRef()
-
 - useRef Hook cho phép bạn giữ nguyên giá trị giữa các lần render.
 - Nó có thể được sử dụng để lưu trữ một giá trị có thể thay đổi (mutable value) mà không gây ra việc render lại khi cập nhật.
 - Nó có thể được sử dụng để truy cập trực tiếp vào phần tử DOM.
+
+
+Phương thức useState()
+- State là một đối tượng tích hợp sẵn trong React, được sử dụng để chứa dữ liệu hoặc thông tin về thành phần (component).
+- State có thể được sửa đổi dựa trên hành động của người dùng (user action) hoặc thay đổi mạng (network changes).
+- Mỗi khi state của một đối tượng thay đổi, React sẽ kết xuất lại (re-render) thành phần đó lên trình duyệt.
