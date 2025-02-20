@@ -9,6 +9,14 @@ const App = () => {
     setList([...list]);
   }
 
+  const RemoveItem = (index) => {
+    if (window.confirm('Are you sure you want to delete this item?'))  // Ask for confirmation before deleting item.
+    {
+      list.splice(index, 1);
+      setList([...list]);
+    }
+  }
+
   return (
     <div>
       <p>item: {item.length}</p>
@@ -27,7 +35,7 @@ const App = () => {
               <tr key={index}>
                 <td>{index + 1}</td>
                 <td> {item}</td>
-                <td><button className='btn btn-danger' onClick={() => { list.splice(index, 1); setList([...list]) }}>delete</button></td>
+                <td><button className='btn btn-danger' onClick={() => { RemoveItem(index) }}>delete</button></td>
               </tr>
             ))
           )
