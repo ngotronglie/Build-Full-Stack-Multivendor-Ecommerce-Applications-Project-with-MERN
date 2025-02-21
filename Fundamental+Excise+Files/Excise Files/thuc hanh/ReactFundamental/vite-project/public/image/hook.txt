@@ -17,3 +17,8 @@ Phương thức useState()
 - State là một đối tượng tích hợp sẵn trong React, được sử dụng để chứa dữ liệu hoặc thông tin về thành phần (component).
 - State có thể được sửa đổi dựa trên hành động của người dùng (user action) hoặc thay đổi mạng (network changes).
 - Mỗi khi state của một đối tượng thay đổi, React sẽ kết xuất lại (re-render) thành phần đó lên trình duyệt.
+
+Phương thức useEffect()
+Hook useEffect cho phép bạn thực hiện các hiệu ứng phụ trong component của mình.
+useEffect nhận hai đối số. Đối số thứ hai là mảng phụ thuộc tùy chọn.
+Chủ yếu được sử dụng để lấy dữ liệu.
