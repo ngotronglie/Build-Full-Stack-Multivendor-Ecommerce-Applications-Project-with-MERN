@@ -1,14 +1,19 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 const App = () => {
+
+  let [data, setData] = useState([]);
+
   useEffect(() => {
-    // Khi component được mount, đoạn code trong useEffect này sẽ chạy một lần
-    console.log("hello useEffect");
-  }, []); // Mảng dependency rỗng đảm bảo effect chỉ chạy một lần khi component mount
+    fetch(
+      'https://dummyjson.com/products/1'
+    ).then(res => res.json())
+      .then(json => setData(json));
+  }, []);
 
   return (
     <div>
-      {/* Component không có nội dung hiển thị, chỉ có useEffect chạy */}
+      {JSON.stringify(data)}
     </div>
   );
 };
