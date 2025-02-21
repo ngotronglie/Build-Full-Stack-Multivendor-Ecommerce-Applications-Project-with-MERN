@@ -7,9 +7,10 @@ import Header from './component/Header.jsx';
 // import Hero from './component/Hero';
 // import Menu from './component/Menu';
 import 'bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css'; 
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import './assets/css/style.css';
+import 'milligram/dist/milligram.css';
 // import Alert from './component/Alert';
 
 createRoot(document.getElementById('root')).render(
