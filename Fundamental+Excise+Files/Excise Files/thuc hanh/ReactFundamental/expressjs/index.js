@@ -4,6 +4,15 @@ var app = express();
 app.get('/', function(req, res) {
     res.send('Hello express js!');
 });
+app.get('/about', function(req, res) {
+    res.send('about page!');
+});
+app.post('/contact', function(req, res) {
+    res.send('contact page!');
+});
+app.delete('/shop', function(req, res) {
+    res.send('shop page!');
+});
 
 app.listen(8000, function () {
     console.log('Example app listening http://localhost:8000/');
