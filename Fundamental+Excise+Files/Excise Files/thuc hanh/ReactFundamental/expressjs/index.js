@@ -1,26 +1,12 @@
 var express = require('express');
 var app = express();
 
-app.get('/', function (req, res) {
-    let myJsonArray = [
-        {
-            name: 'foo',
-            age: 25
-        },
-        {
-            name: 'bar',
-            age: 30
-        },
-        {
-            name: 'baz',
-            age: 35
-        }
-    ]
-    res.json(myJsonArray);
+app.get('/usa', function (req, res) {
+    res.redirect('http://localhost:8000/india');
 });
 
-app.get('/dowload', function (req, res) {
-   res.download('uploads/dowload.png');
+app.get('/india', function (req, res) {
+    res.send('this is india page! ');
 });
 
 app.listen(8000, function () {
