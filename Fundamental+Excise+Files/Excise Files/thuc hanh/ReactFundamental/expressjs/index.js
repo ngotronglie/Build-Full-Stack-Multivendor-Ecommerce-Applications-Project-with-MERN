@@ -1,26 +1,11 @@
 var express = require('express');
 var app = express();
 
-app.get('/', function(req, res) {
-    res.send('Hello express js!');
+app.get('/401', function (req, res) {
+    res.status(401).end("you don't have permission to access this page");
 });
-app.get('/about', function(req, res) {
-    res.send('about page!');
-});
-app.post('/contact', function(req, res) {
-    res.send('contact page!');
-});
-app.delete('/shop', function(req, res) {
-    res.send('shop page!');
-});
-app.get('/one', function(req, res) {
-    res.send('this is simple string response !');
-});
-app.post('/two', function(req, res) {
-    res.send('this is post simple string response !');
-});
-app.get('/end', function(req, res) {
-    res.end('this is simple end string response !');
+app.get('/201', function (req, res) {
+    res.status(201).end("you don't have permission to access this page");
 });
 
 app.listen(8000, function () {
