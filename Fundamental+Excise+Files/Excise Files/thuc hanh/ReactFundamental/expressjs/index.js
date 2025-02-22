@@ -1,18 +1,9 @@
 var express = require('express');
 var app = express();
 
-// request method 
-/**
- * post()
- * get()
- * put()
- * delete()
- */
 
-app.get('/', function(req, res) {
-   let firstName = req.header('firstName');
-    let lastName = req.header('lastName');
-    res.end('Hello ' + firstName + ' ' + lastName);
+app.post('/', function(req, res) {
+   res.send('this is simple post request');
 });
 
 
