@@ -19,6 +19,10 @@ app.get('/', function (req, res) {
     res.json(myJsonArray);
 });
 
+app.get('/dowload', function (req, res) {
+   res.download('uploads/dowload.png');
+});
+
 app.listen(8000, function () {
     console.log('Example app listening http://localhost:8000/');
 });
