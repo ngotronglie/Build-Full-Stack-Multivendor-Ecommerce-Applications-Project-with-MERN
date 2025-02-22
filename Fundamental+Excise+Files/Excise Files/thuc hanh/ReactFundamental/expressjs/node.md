@@ -37,3 +37,7 @@ package.json sẽ có thêm:
 ```
 package-lock.json sẽ cập nhật thông tin về phiên bản cài đặt.
 
+------
+
+# response status code: 
+tham khao : [click here](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
