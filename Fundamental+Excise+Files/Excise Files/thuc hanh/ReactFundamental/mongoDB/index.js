@@ -25,3 +25,18 @@ const userSchema = new mongoose.Schema({
 });
 
 const User = mongoose.model('User', userSchema);
+
+
+async function storeInformation(){
+    const user = new User({
+        name: 'John',
+        age: 25,
+        isMarried: false,
+        salary: 10000,
+        gender: 'male'
+    });
+    
+    await user.save(); 
+    console.log(user)
+}
+storeInformation();
