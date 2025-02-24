@@ -1,7 +1,7 @@
 # MongoDB là gì?  
 
 ## 📌 Giới thiệu  
-MongoDB là một **hệ quản trị cơ sở dữ liệu NoSQL** phổ biến, được thiết kế để lưu trữ dữ liệu dưới dạng **document (tài liệu JSON/BSON)** thay vì bảng và dòng như SQL.  
+MongoDB là một **hệ quản trị cơ sở dữ liệu NoSQL** phổ biến, được thiết kế để lưu trữ dữ liệu dưới dạng **document (tài liệu JSON)** thay vì bảng và dòng như SQL.  
 
 ### 🔹 Đặc điểm chính của MongoDB:
 - **NoSQL** → Không sử dụng bảng, mà lưu dữ liệu dưới dạng **document JSON**.  
@@ -13,7 +13,7 @@ MongoDB là một **hệ quản trị cơ sở dữ liệu NoSQL** phổ biến,
 ---
 
 ## 📂 Ví dụ về dữ liệu trong MongoDB  
-Dữ liệu trong MongoDB được lưu dưới dạng **document JSON/BSON**, ví dụ:  
+Dữ liệu trong MongoDB được lưu dưới dạng **document JSON**, ví dụ:  
 
 ```json
 {
@@ -23,3 +23,13 @@ Dữ liệu trong MongoDB được lưu dưới dạng **document JSON/BSON**, v
   "email": "ngotrongliem2004@gmail.com",
   "skills": ["Node.js", "Laravel", "React"]
 }
+```
+
+- download mongo server community: https://www.mongodb.com/try/download/community
+...
+
+
+### test command
+```bash
+mongod --version
+```
