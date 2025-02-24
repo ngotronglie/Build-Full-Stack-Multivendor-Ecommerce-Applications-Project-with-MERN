@@ -3,9 +3,10 @@ var app = express();
 
 
 app.post('/', function(req, res) {
-   let firstName = req.query.firstName;
-    let lastName = req.query.lastName;
-    res.send('Hello '+ firstName +' ' + lastName);
+   let userName = req.header('userName');
+    let passWord = req.header('passWord');
+
+    res.send("userName: "+ userName + '/ password:' + passWord);
 });
 
 
