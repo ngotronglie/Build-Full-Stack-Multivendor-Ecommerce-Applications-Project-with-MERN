@@ -3,14 +3,14 @@ var multer = require('multer');  // Import thư viện Multer để xử lý upl
 var app = express();  // Tạo một ứng dụng Express
 
 
-app.use(function(req,res,next){
-    console.log("i'm from middleware validation")// khi load trang no se hien neen 1 dong o console nos duoc chay khi co 1 resquest 
-    next()
-})
 
 app.get('/', function(req, res) {  
-
+    
     res.send('this is home page')
+})
+app.use('/about',function(req,res,next){
+    console.log("i'm from about validation") // khi nao vao trang about thi no moi cos console 
+    next()
 })
 
 app.get('/contact', function(req, res) {  
