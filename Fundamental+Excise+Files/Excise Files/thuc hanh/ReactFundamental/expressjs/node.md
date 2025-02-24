@@ -58,3 +58,22 @@ Multer là một middleware của Express, chuyên dùng để xử lý việc u
 📌 Khi nào cần dùng multer?
 Khi cần upload ảnh, video, file PDF, v.v.
 Khi cần xử lý dữ liệu từ form có file đính kèm (enctype="multipart/form-data").
+
+# Middleware trong Mã Express.js
+
+## 📌 Middleware là gì?  
+Middleware trong Express.js là một **hàm trung gian** được gọi trước khi yêu cầu (request) được xử lý hoàn tất. Nó có quyền truy cập vào:  
+- **Request (`req`)**  
+- **Response (`res`)**  
+- **Hàm tiếp theo (`next`)**  
+
+Middleware giúp xử lý dữ liệu trước khi chuyển sang bước tiếp theo trong chu trình request-response.
+
+---
+
+## **Middleware Multer trong mã trên**  
+Trong đoạn mã sau, **Multer** đóng vai trò là một middleware để xử lý file upload:
+
+```js
+var upload = multer({ storage: storage }).single('myfile');
+```
