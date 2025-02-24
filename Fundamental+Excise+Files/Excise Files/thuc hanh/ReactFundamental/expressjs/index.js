@@ -1,16 +1,17 @@
 var express = require('express');
 var app = express();
+var bodyParser = require('body-parser');
+
+app.use(bodyParser.json());
 
 
 app.post('/', function(req, res) {
-   let userName = req.header('userName');
-    let passWord = req.header('passWord');
-
-    res.send("userName: "+ userName + '/ password:' + passWord);
+  let JSONData = req.body;
+  let JSONString = JSON.stringify(JSONData);
+  res.send(JSONString);
 });
 
 
 app.listen(8000, function () {
     console.log('Example app listening http://localhost:8000/');
-    // http://localhost:8000?firstName=Liem&lastName=Trong
 });

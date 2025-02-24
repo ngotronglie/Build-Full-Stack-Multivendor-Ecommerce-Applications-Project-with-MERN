@@ -41,3 +41,13 @@ package-lock.json sẽ cập nhật thông tin về phiên bản cài đặt.
 
 # response status code: 
 tham khao : [click here](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
+
+## `npm i body-parser`
+Câu lệnh npm i body-parser dùng để cài đặt package body-parser trong Node.js.
+
+- Chức năng của body-parser
+  body-parser là một middleware dùng để xử lý dữ liệu từ body của request trong Express. Nó giúp trích xuất dữ liệu từ các form             hoặc     JSON mà client gửi lên server.
+
+- Khi nào cần dùng body-parser?
+  Khi cần xử lý dữ liệu gửi từ form HTML (application/x-www-form-urlencoded).
+    Khi cần xử lý dữ liệu JSON từ client.
