@@ -1,14 +1,18 @@
 var express = require('express');
 var app = express();
-var bodyParser = require('body-parser');
+var multer = require('multer');
 
-app.use(bodyParser.json());
+var multer = multer();
+
+
+app.use(multer.array());
+
+app.use(express.static('public'));
 
 
 app.post('/', function(req, res) {
-  let JSONData = req.body;
-  let JSONString = JSON.stringify(JSONData);
-  res.send(JSONString);
+    let JSONdata = req.body
+    res.send(JSON.stringify(JSONdata));
 });
 
 

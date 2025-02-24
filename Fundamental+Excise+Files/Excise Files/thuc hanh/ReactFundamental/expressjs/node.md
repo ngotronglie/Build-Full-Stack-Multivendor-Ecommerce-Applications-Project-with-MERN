@@ -45,9 +45,16 @@ tham khao : [click here](https://developer.mozilla.org/en-US/docs/Web/HTTP/Statu
 ## `npm i body-parser`
 Câu lệnh npm i body-parser dùng để cài đặt package body-parser trong Node.js.
 
-- Chức năng của body-parser
+📌 Chức năng của body-parser
   body-parser là một middleware dùng để xử lý dữ liệu từ body của request trong Express. Nó giúp trích xuất dữ liệu từ các form             hoặc     JSON mà client gửi lên server.
 
-- Khi nào cần dùng body-parser?
+📌 Khi nào cần dùng body-parser?
   Khi cần xử lý dữ liệu gửi từ form HTML (application/x-www-form-urlencoded).
     Khi cần xử lý dữ liệu JSON từ client.
+## `npm i multer`
+📌 Multer là gì?
+Multer là một middleware của Express, chuyên dùng để xử lý việc upload file từ client lên server. Nó hỗ trợ xử lý dữ liệu dạng multipart/form-data (định dạng phổ biến khi upload file trong HTML form).
+
+📌 Khi nào cần dùng multer?
+Khi cần upload ảnh, video, file PDF, v.v.
+Khi cần xử lý dữ liệu từ form có file đính kèm (enctype="multipart/form-data").
