@@ -58,4 +58,15 @@ async function fetchInformation() {
     }
 }
 
-fetchInformation();
+// fetchInformation();
+
+// update information 
+
+async function updateInformation() 
+{
+    const user = await User.findById('67bd93d372bb52826950dc2b')
+    user.isMarried = true;
+    await user.save();
+    console.log('update success !!!');
+}
+updateInformation();
