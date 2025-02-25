@@ -39,4 +39,23 @@ async function storeInformation(){
     await user.save(); 
     console.log(user)
 }
-storeInformation();
+// storeInformation();
+
+// Hàm fetchInformation() được viết ra để lấy danh sách tất cả người dùng (users) từ cơ sở dữ liệu MongoDB và in ra console.
+async function fetchInformation(){
+    const users = await User.find({});
+    console.log(users);
+}
+
+// fetchInformation();
+
+
+// tìm người chưa kết hôn, có lương là 80000
+
+async function findSingleUser(){
+    const user = await User.find({ isMarried: false, salary:80000 });
+    const findUserById = await User.findById('6027d245cc9c6a2a5800440a');
+    console.log(user);
+    console.log(findUserById);
+}
+findSingleUser();
