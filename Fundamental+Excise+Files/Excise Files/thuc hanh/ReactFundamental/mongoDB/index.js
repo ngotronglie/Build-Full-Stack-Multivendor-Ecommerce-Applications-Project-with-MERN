@@ -53,9 +53,10 @@ async function fetchInformation(){
 // tìm người chưa kết hôn, có lương là 80000
 
 async function findSingleUser(){
-    const user = await User.find({ isMarried: false, salary:80000 });
-    const findUserById = await User.findById('6027d245cc9c6a2a5800440a');
+    const user = await User.find({ isMarried: false }).select('name salary').sort('salary').limit(2); // select name, salary user who is not married where sort salary and limit 2
+    // const user = await User.find({ isMarried: false }).select('-name -salary').sort('-salary'); // select name, salary user who is not married where sort salary
+    const countUser = await User.find({ isMarried: false }).countDocuments();
     console.log(user);
-    console.log(findUserById);
+    console.log(countUser); // output = 3 (3 người chưa kết hôn) 
 }
 findSingleUser();
