@@ -62,11 +62,36 @@ async function fetchInformation() {
 
 // update information 
 
-async function updateInformation() 
-{
-    const user = await User.findById('67bd93d372bb52826950dc2b')
-    user.isMarried = true;
-    await user.save();
-    console.log('update success !!!');
+async function updateInformation() {
+    try {
+        const userId = '67bd93d372bb52826950dc2b'; // ID của user cần cập nhật
+
+        // Kiểm tra ID hợp lệ trước khi tiếp tục
+        if (!userId) {
+            console.error("ID không hợp lệ!");
+            return;
+        }
+
+        const updatedUser = await User.findByIdAndUpdate(
+            userId,
+            {
+                name: 'Jane',
+                age: 80,
+                isMarried: false,
+                salary: 20000,
+            },
+            { new: true, runValidators: true }
+        ).lean(); // Chuyển đổi kết quả thành JSON đơn giản để tối ưu hiệu suất
+
+        if (!updatedUser) {
+            console.log("Không tìm thấy người dùng để cập nhật!");
+            return;
+        }
+
+        console.log('Cập nhật thành công:', updatedUser);
+    } catch (error) {
+        console.error("Lỗi khi cập nhật thông tin:", error);
+    }
 }
+
 updateInformation();
