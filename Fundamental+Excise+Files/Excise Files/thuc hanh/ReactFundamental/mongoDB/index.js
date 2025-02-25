@@ -94,4 +94,49 @@ async function updateInformation() {
     }
 }
 
-updateInformation();
+// updateInformation();
+
+
+// delete information
+
+async function deleteInformation() {
+    try {
+        const userId = '67bd93d372bb52826950dc2b'; // ID của user cần xóa
+
+        // Kiểm tra ID hợp lệ trước khi thực hiện xóa
+        if (!userId) {
+            console.error("ID không hợp lệ!");
+            return;
+        }
+
+        const result = await User.deleteOne({ _id: userId });
+
+        if (result.deletedCount === 0) {
+            console.log("Không tìm thấy người dùng để xóa!");
+            return;
+        }
+
+        console.log("Xóa thành công!");
+    } catch (error) {
+        console.error("Lỗi khi xóa người dùng:", error);
+    }
+}
+
+// deleteInformation();
+
+async function deleteManyInformation() {
+    try {
+        const result = await User.deleteMany({ isMarried: false });
+
+        if (result.deletedCount === 0) {
+            console.log("Không có người dùng nào chưa kết hôn để xóa!");
+            return;
+        }
+
+        console.log(`Đã xóa ${result.deletedCount} người dùng chưa kết hôn!`);
+    } catch (error) {
+        console.error("Lỗi khi xóa người dùng:", error);
+    }
+}
+
+deleteManyInformation();
