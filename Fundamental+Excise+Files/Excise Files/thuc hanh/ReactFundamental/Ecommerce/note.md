@@ -62,6 +62,8 @@ npm i apexcharts react-apexcharts axios jwt-decode moment react-hot-toast react-
 # Hướng Dẫn Cài Đặt Và Khởi Tạo Tailwind CSS
 
 ## 1. Cài đặt Tailwind CSS
+[docs](https://v3.tailwindcss.com/docs/guides/create-react-app)
+
 ### Lệnh:
 ```sh
 npm install -D tailwindcss
