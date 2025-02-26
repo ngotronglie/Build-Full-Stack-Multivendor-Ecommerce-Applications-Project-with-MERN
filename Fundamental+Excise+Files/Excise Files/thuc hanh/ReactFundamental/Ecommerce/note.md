@@ -57,3 +57,50 @@ npm i apexcharts react-apexcharts axios jwt-decode moment react-hot-toast react-
 
 ## **Giao tiếp real-time**
 - **`socket.io-client`**: Thư viện giúp kết nối với WebSocket để truyền dữ liệu theo thời gian thực.
+
+--- 
+# Hướng Dẫn Cài Đặt Và Khởi Tạo Tailwind CSS
+
+## 1. Cài đặt Tailwind CSS
+### Lệnh:
+```sh
+npm install -D tailwindcss
+```
+### Giải thích:
+Lệnh này dùng để cài đặt Tailwind CSS vào dự án Node.js.
+
+- `npm install`: Lệnh này dùng để cài đặt package từ npm.
+- `-D` hoặc `--save-dev`: Cờ này cho biết package sẽ được thêm vào danh sách `devDependencies`, tức là chỉ dùng trong quá trình phát triển, không ảnh hưởng đến bản build cuối cùng.
+- `tailwindcss`: Đây là package chứa thư viện Tailwind CSS.
+
+Sau khi chạy lệnh này:
+- Thư viện Tailwind CSS sẽ được thêm vào thư mục `node_modules`.
+- Trong file `package.json`, Tailwind CSS sẽ được thêm vào phần `devDependencies`.
+
+---
+
+## 2. Khởi tạo tệp cấu hình Tailwind CSS
+### Lệnh:
+```sh
+npx tailwindcss init
+```
+### Giải thích:
+Lệnh này dùng để tạo tệp cấu hình mặc định cho Tailwind CSS.
+
+- `npx`: Dùng để chạy một package npm mà không cần cài đặt toàn cục.
+- `tailwindcss init`: Khởi tạo tệp `tailwind.config.js`, giúp tùy chỉnh Tailwind CSS.
+
+Sau khi chạy lệnh này, một tệp `tailwind.config.js` sẽ được tạo trong thư mục gốc của dự án. Tệp này cho phép bạn mở rộng và tùy chỉnh các thiết lập mặc định của Tailwind, như:
+- Thêm hoặc sửa đổi màu sắc, font chữ.
+- Định nghĩa các breakpoints tùy chỉnh.
+- Bật hoặc tắt các tính năng của Tailwind.
+
+---
+
+## Lưu Ý:
+- Nếu chạy lệnh `npx tailwindcss init` bị lỗi **"tailwind is not recognized as an internal or external command"**, có thể do Tailwind chưa được cài đặt hoặc `node_modules/.bin` chưa được nhận diện.
+- Để khắc phục, có thể thử cài đặt lại bằng lệnh:
+  ```sh
+  npm install -D tailwindcss
+  ```
+- Nếu vẫn bị lỗi, hãy kiểm tra xem `package.json` đã có `tailwindcss` chưa, nếu chưa thì cần cài đặt lại.
