@@ -106,3 +106,15 @@ Sau khi chạy lệnh này, một tệp `tailwind.config.js` sẽ được tạo
   npm install -D tailwindcss
   ```
 - Nếu vẫn bị lỗi, hãy kiểm tra xem `package.json` đã có `tailwindcss` chưa, nếu chưa thì cần cài đặt lại.
+
+
+
+-----------------------
+
+
+## `npm i react-router-dom`
+
+react-router-dom là thư viện giúp bạn quản lý điều hướng (routing) trong ứng dụng React. Nó cho phép bạn:
+✅ Tạo các trang (pages) và điều hướng giữa chúng mà không cần tải lại trang.
+✅ Xử lý đường dẫn động (dynamic routing), ví dụ: /products/:id.
+✅ Chuyển hướng (redirect) và bảo vệ trang (protected routes).
