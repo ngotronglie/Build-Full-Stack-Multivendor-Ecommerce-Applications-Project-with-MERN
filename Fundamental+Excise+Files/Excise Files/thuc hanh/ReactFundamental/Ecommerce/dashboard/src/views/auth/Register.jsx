@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 import { FaGoogle } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 const Register = () => {
