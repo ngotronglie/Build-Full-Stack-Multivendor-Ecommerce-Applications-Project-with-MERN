@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { admin_login } from '../../store/Reducers/authReducer';
 
-import { FaGoogle } from "react-icons/fa";
-import { FaFacebook } from "react-icons/fa";
+
+
+
 const AdminLogin = () => {
+    const dispatch = useDispatch();
 
 
     const [state, setState] = React.useState({
@@ -20,7 +23,8 @@ const AdminLogin = () => {
 
     const submit = (e) => {
         e.preventDefault();
-        console.log(state);
+        dispatch(admin_login(state));
+        // console.log(state);
     };
 
 
