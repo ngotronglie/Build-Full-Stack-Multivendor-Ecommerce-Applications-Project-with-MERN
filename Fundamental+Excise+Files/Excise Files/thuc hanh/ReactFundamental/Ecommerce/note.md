@@ -170,3 +170,7 @@ npm install express bcrypt body-parser cloudinary cookie-parser cors dotenv form
 npm i nodemon -D
 ```
 - **cong dung**: Theo dõi thay đổi trong code và tự động restart server.
+
+---
+
+[https://bcrypt-generator.com/](https://bcrypt-generator.com/): trang wweb giup genate mat khau
