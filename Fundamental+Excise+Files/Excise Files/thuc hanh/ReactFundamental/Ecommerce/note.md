@@ -124,3 +124,49 @@ react-router-dom là thư viện giúp bạn quản lý điều hướng (routin
 - user dashboard
 - admin dashboard
 - seller dashboard
+-----
+
+# Danh sách package và công dụng `backend`
+
+## 1. Framework & Server
+- **express**: Framework giúp xây dựng server nhanh chóng trong Node.js.
+
+## 2. Bảo mật & Xác thực
+- **bcrypt**: Mã hóa mật khẩu trước khi lưu vào database.
+- **jsonwebtoken**: Xử lý xác thực bằng JSON Web Token (JWT).
+- **cookie-parser**: Hỗ trợ làm việc với cookie trong Express.
+
+## 3. Xử lý dữ liệu
+- **body-parser**: Phân tích request body (JSON, form data, v.v.).
+- **formidable**: Hỗ trợ upload file trong Node.js.
+- **cors**: Cho phép các request từ domain khác (CORS policy).
+
+## 4. Quản lý cấu hình
+- **dotenv**: Quản lý biến môi trường trong file `.env`.
+
+## 5. Cơ sở dữ liệu (Database)
+- **mongoose**: ODM giúp kết nối và làm việc với MongoDB.
+
+## 6. Thanh toán
+- **stripe**: Tích hợp thanh toán trực tuyến với Stripe.
+
+## 7. Thời gian & UUID
+- **moment**: Làm việc với ngày giờ dễ dàng hơn.
+- **uuid**: Tạo mã định danh (ID) duy nhất.
+
+## 8. Realtime Communication
+- **socket.io**: Hỗ trợ giao tiếp realtime giữa client và server.
+
+## 9. Upload ảnh
+- **cloudinary**: Lưu trữ và quản lý ảnh trên Cloudinary.
+
+### bash
+```
+npm install express bcrypt body-parser cloudinary cookie-parser cors dotenv formidable jsonwebtoken moment mongoose socket.io stripe uuid
+```
+
+## 10. nodemon
+```
+npm i nodemon -D
+```
+- **cong dung**: Theo dõi thay đổi trong code và tự động restart server.
