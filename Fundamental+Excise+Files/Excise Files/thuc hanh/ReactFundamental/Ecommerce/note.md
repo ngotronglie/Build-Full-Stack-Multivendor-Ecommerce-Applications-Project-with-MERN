@@ -118,3 +118,4 @@ react-router-dom là thư viện giúp bạn quản lý điều hướng (routin
 ✅ Tạo các trang (pages) và điều hướng giữa chúng mà không cần tải lại trang.
 ✅ Xử lý đường dẫn động (dynamic routing), ví dụ: /products/:id.
 ✅ Chuyển hướng (redirect) và bảo vệ trang (protected routes).
+
