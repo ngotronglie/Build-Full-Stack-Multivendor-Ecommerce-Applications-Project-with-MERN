@@ -8,6 +8,8 @@ app.get('/' , (req , res) => {
     res.send('Hello World! welcome to backend!!!');
 });
 
+app.use('/api', require('./routes/authRoutes'));
+
 
 
 app.listen(port , () => console.log(`Server is running on port ${port}`)); ;
