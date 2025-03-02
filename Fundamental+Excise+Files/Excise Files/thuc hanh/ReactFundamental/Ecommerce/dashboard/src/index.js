@@ -5,7 +5,7 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './store';
-import Toaster from'react-hot-toast';
+import { Toaster } from'react-hot-toast';
 
 const App = lazy(()=> import('./App'));
 
@@ -16,27 +16,30 @@ root.render(
     <Suspense fallback={<div>Loading...</div>}>
     <App />
     <Toaster
-      toastOptions={{
-        position: 'top-right',
-        duration: 5000,
-        style: {
-          background: '#283046',
-          color: '#fff',
-        },
-        success: {
-          style: {
-            background: '#00a86b',
-            color: '#fff',
-          },
-        },
-        error: {
-          style: {
-            background: '#ff5630',
-            color: '#fff',
-          },
-        },
-      }}
-    ></Toaster>
+  position="top-right"
+  reverseOrder={false}
+  gutter={8}
+  toastOptions={{
+    duration: 5000,
+    style: {
+      background: '#283046',
+      color: '#fff',
+    },
+    success: {
+      style: {
+        background: '#00a86b',
+        color: '#fff',
+      },
+    },
+    error: {
+      style: {
+        background: '#ff5630',
+        color: '#fff',
+      },
+    },
+  }}
+/>
+
     </Suspense>
   </Provider>
   </BrowserRouter>

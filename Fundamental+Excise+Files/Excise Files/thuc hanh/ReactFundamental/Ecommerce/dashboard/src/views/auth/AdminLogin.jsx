@@ -1,15 +1,14 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { admin_login } from '../../store/Reducers/authReducer';
+import { admin_login, messageClear } from '../../store/Reducers/authReducer';
 import { PropagateLoader } from 'react-spinners';
-
+import { toast } from 'react-hot-toast';
 import { useSelector } from 'react-redux';
-
 
 
 const AdminLogin = () => {
     const dispatch = useDispatch();
-    const { loader } = useSelector((state) => state.auth);
+    const { loader, errorMessage } = useSelector((state) => state.auth);
 
     const [state, setState] = React.useState({
         email: '',
@@ -36,6 +35,16 @@ const AdminLogin = () => {
         justifyContent: 'center',
         alignItem: 'center',
     }
+
+
+    useEffect(() => {
+        if (errorMessage) {
+            console.log('>>> errorMessage: ' + errorMessage);
+            toast.error(errorMessage);
+            dispatch(messageClear());
+        }
+    }, [errorMessage]);
+
 
 
 
