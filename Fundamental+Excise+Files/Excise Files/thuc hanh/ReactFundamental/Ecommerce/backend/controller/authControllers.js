@@ -1,5 +1,5 @@
 const adminModel = require('../models/adminModel'); // Import model admin từ database
-const { responseReture } = require('../utiles/response'); // Import hàm phản hồi HTTP
+const { responseReturn } = require('../utiles/response'); // Import hàm phản hồi HTTP
 const bcrypt = require('bcrypt'); // Import bcrypt để hash và kiểm tra mật khẩu
 const { createToken } = require('../utiles/tokenCreate'); // Import hàm tạo JWT token
 
@@ -10,7 +10,7 @@ class AuthControllers {
 
         // Kiểm tra nếu không nhập email hoặc password
         if (!email || !password) {
-            return responseReture(res, 400, { error: "Email and password are required!" });
+            return responseReturn(res, 400, { error: "Email and password are required!" });
         }
 
         try {
@@ -36,18 +36,18 @@ class AuthControllers {
                     });
 
                     // Trả về phản hồi thành công với token
-                    responseReture(res, 200, { token, message: 'Login successfully!' });
+                    responseReturn(res, 200, { token, message: 'Login successfully!' });
                 } else {
                     // Nếu mật khẩu sai, trả về lỗi
-                    responseReture(res, 401, { error: 'Password incorrect!' });
+                    responseReturn(res, 401, { error: 'Password incorrect!' });
                 }
             } else {
                 // Nếu không tìm thấy email, trả về lỗi
-                responseReture(res, 404, { error: 'Email not found!' });
+                responseReturn(res, 404, { error: 'Email not found!' });
             }
         } catch (error) {
             // Bắt lỗi hệ thống và trả về lỗi 500
-            responseReture(res, 500, { error: error.message });
+            responseReturn(res, 500, { error: error.message });
         }
     }
 }
