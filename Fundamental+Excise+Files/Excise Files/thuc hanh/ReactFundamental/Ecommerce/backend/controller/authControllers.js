@@ -50,6 +50,25 @@ class AuthControllers {
             responseReturn(res, 500, { error: error.message });
         }
     }
+
+    // end method 
+    getUser = async (req, res) => {
+        const {id, role} = req;
+        try {
+            if(role === 'admin') {
+                const user = await adminModel.findById(id);
+                if(user) {
+                    responseReturn(res, 200, {userInfo: user});
+                } else {
+                    responseReturn(res, 404, {error: 'User not found!'});
+                    console.log('seller info')
+                }
+            }
+        } catch (error) {
+            console.log(error.message)
+        }
+
+    }// end method getuser
 }
 
 module.exports = new AuthControllers(); // Xuất controller để sử dụng trong routes
