@@ -174,5 +174,3 @@ npm i nodemon -D
 ---
 
 [https://bcrypt-generator.com/](https://bcrypt-generator.com/): trang wweb giup genate mat khau
-
-
