@@ -1,14 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { admin_login, messageClear } from '../../store/Reducers/authReducer';
+import { admin_login, messageClear, successMessage } from '../../store/Reducers/authReducer';
 import { PropagateLoader } from 'react-spinners';
 import { toast } from 'react-hot-toast';
 import { useSelector } from 'react-redux';
 
+import { useNavigate } from 'react-router-dom';
+
 
 const AdminLogin = () => {
+
+    const navigate = useNavigate()
+
     const dispatch = useDispatch();
-    const { loader, errorMessage } = useSelector((state) => state.auth);
+    const { loader, errorMessage, successMessage } = useSelector((state) => state.auth);
 
     const [state, setState] = React.useState({
         email: '',
@@ -43,7 +48,13 @@ const AdminLogin = () => {
             toast.error(errorMessage);
             dispatch(messageClear());
         }
-    }, [errorMessage]);
+        if (successMessage) {
+            console.log('>>> successMessage: ' + successMessage);
+            toast.success(successMessage);
+            dispatch(messageClear());
+            navigate('/')
+        }
+    }, [errorMessage, successMessage]);
 
 
 
