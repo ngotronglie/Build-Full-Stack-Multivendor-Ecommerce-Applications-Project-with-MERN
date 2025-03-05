@@ -7,3 +7,4 @@ const Router = ({ allRoutes }) => {
 };
 
 export default Router;
+``
