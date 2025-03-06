@@ -4,6 +4,7 @@ import { MdProductionQuantityLimits } from "react-icons/md";
 import { FaUsers } from "react-icons/fa";
 import { FaCartArrowDown } from "react-icons/fa";
 import Chart from "react-apexcharts";
+import { Link } from 'react-router-dom';
 
 
 const AdminDashboard = () => {
@@ -127,6 +128,62 @@ const AdminDashboard = () => {
                 <div className='w-full lg:w-7/12 lg:pr-3'>
                     <div className='w-full bg-[#6a5fdf] p-4 rounded-md'>
                         <Chart options={state.options} series={state.series} type="bar" height={350} />
+                    </div>
+                </div>
+                {/* ------------------------------------------------ */}
+                <div className='w-full lg:w-5/12 lg:pl-4 mt-6 lg:mt-0'>
+                    <div className='w-full bg-[#6a5fdf] p-4 rounded-md text-[#d0d2d6]'>
+                        <div className='flex justify-between items-center pb-3'>
+                            <h2 className='font-semibold text-lg text-[#d0d2d6]'>Recent Seller Message</h2>
+                            <Link className='text-sm text-[#d0d2d6] font-semibold' to='/404'>View all</Link>
+                        </div>
+
+                        <div className='flex flex-col gap-2 pt-6 text-[#d0d2d6] '>
+                            <ol className='relative border-1 border-slate-600 ml-4'>
+                                <li className='mb-3 ml-6'>
+                                    <div className='flex absolute -left-5 shadow-lg justify-center items-center w-10 h-10 p-[6px] bg-[#4c7fe2] z-10 rounded-full'>
+                                        <img className='w-full rounded-full h-full shadow-lg' src="http://localhost:3000/images/admin.jpg" alt="" />
+                                    </div>
+                                    <div className='p-3 bg-slate-800 rounded-lg border border-purple-600 shadow-sm'>
+                                        <div className='flex justify-between items-center mb-2'>
+                                            <Link className='text-md font-normal'>admin</Link>
+                                            <time className='mb-1 text-sm font-normal sm:order-last sm:mb-0' datetime="">2 day ago</time>
+                                        </div>
+                                        <div className='p-2 text-xs font-normal bg-slate-700 rounded-lg border border-slate-800 '>
+                                            How are you?
+                                        </div>
+                                    </div>
+                                </li>
+                                <li className='mb-3 ml-6'>
+                                    <div className='flex absolute -left-5 shadow-lg justify-center items-center w-10 h-10 p-[6px] bg-[#4c7fe2] z-10 rounded-full'>
+                                        <img className='w-full rounded-full h-full shadow-lg' src="http://localhost:3000/images/admin.jpg" alt="" />
+                                    </div>
+                                    <div className='p-3 bg-slate-800 rounded-lg border border-purple-600 shadow-sm'>
+                                        <div className='flex justify-between items-center mb-2'>
+                                            <Link className='text-md font-normal'>admin</Link>
+                                            <time className='mb-1 text-sm font-normal sm:order-last sm:mb-0' datetime="">2 day ago</time>
+                                        </div>
+                                        <div className='p-2 text-xs font-normal bg-slate-700 rounded-lg border border-slate-800 '>
+                                            How are you?
+                                        </div>
+                                    </div>
+                                </li>
+                                <li className='mb-3 ml-6'>
+                                    <div className='flex absolute -left-5 shadow-lg justify-center items-center w-10 h-10 p-[6px] bg-[#4c7fe2] z-10 rounded-full'>
+                                        <img className='w-full rounded-full h-full shadow-lg' src="http://localhost:3000/images/admin.jpg" alt="" />
+                                    </div>
+                                    <div className='p-3 bg-slate-800 rounded-lg border border-purple-600 shadow-sm'>
+                                        <div className='flex justify-between items-center mb-2'>
+                                            <Link className='text-md font-normal'>admin</Link>
+                                            <time className='mb-1 text-sm font-normal sm:order-last sm:mb-0' datetime="">2 day ago</time>
+                                        </div>
+                                        <div className='p-2 text-xs font-normal bg-slate-700 rounded-lg border border-slate-800 '>
+                                            How are you?
+                                        </div>
+                                    </div>
+                                </li>
+                            </ol>
+                        </div>
                     </div>
                 </div>
             </div>
