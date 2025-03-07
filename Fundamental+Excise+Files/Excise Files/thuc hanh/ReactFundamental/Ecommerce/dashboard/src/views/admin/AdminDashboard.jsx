@@ -206,27 +206,17 @@ const AdminDashboard = () => {
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td scope='row' className='py-3 px-4 font-medium whitespace-nowrap'>#34343</td>
-                                <td scope='row' className='py-3 px-4 font-medium whitespace-nowrap'>#34343</td>
-                                <td scope='row' className='py-3 px-4 font-medium whitespace-nowrap'>pending</td>
-                                <td scope='row' className='py-3 px-4 font-medium whitespace-nowrap'>pending</td>
-                                <td scope='row' className='py-3 px-4 font-medium whitespace-nowrap'>view</td>
-                            </tr>
-                            <tr>
-                                <td scope='row' className='py-3 px-4 font-medium whitespace-nowrap'>#34343</td>
-                                <td scope='row' className='py-3 px-4 font-medium whitespace-nowrap'>#34343</td>
-                                <td scope='row' className='py-3 px-4 font-medium whitespace-nowrap'>pending</td>
-                                <td scope='row' className='py-3 px-4 font-medium whitespace-nowrap'>pending</td>
-                                <td scope='row' className='py-3 px-4 font-medium whitespace-nowrap'>view</td>
-                            </tr>
-                            <tr>
-                                <td scope='row' className='py-3 px-4 font-medium whitespace-nowrap'>#34343</td>
-                                <td scope='row' className='py-3 px-4 font-medium whitespace-nowrap'>#34343</td>
-                                <td scope='row' className='py-3 px-4 font-medium whitespace-nowrap'>pending</td>
-                                <td scope='row' className='py-3 px-4 font-medium whitespace-nowrap'>pending</td>
-                                <td scope='row' className='py-3 px-4 font-medium whitespace-nowrap'>view</td>
-                            </tr>
+                            {
+                                [1, 2, 3, 4, 5].map((d, i) =>
+                                    <tr>
+                                        <td scope='row' className='py-3 px-4 font-medium whitespace-nowrap'>#34343</td>
+                                        <td scope='row' className='py-3 px-4 font-medium whitespace-nowrap'>#34343</td>
+                                        <td scope='row' className='py-3 px-4 font-medium whitespace-nowrap'>pending</td>
+                                        <td scope='row' className='py-3 px-4 font-medium whitespace-nowrap'>pending</td>
+                                        <td scope='row' className='py-3 px-4 font-medium whitespace-nowrap'><Link to={'/'}>View</Link></td>
+                                    </tr>
+                                )
+                            }
                         </tbody>
                     </table>
                 </div>
