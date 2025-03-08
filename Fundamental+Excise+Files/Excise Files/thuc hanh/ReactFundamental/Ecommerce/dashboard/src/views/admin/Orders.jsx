@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { BsBoxArrowInDown } from "react-icons/bs";
 import { MdKeyboardDoubleArrowDown } from "react-icons/md";
-
+import Pagination from "../Pagination";
 const Orders = () => {
 
     const [currentPage, setCurrentPage] = useState(1);
@@ -188,6 +188,15 @@ const Orders = () => {
 
                     </div>
                 </div>
+
+                <Pagination
+                    pageNumber={currentPage}
+                    setPageNumber={setCurrentPage}
+                    totalItem={50}
+                    parPage={parPage}
+                    showItems={3}
+                />
+
             </div>
         </div>
     )
