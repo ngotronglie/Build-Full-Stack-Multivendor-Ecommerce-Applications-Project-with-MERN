@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import { BsBoxArrowInDown } from "react-icons/bs";
+import { MdKeyboardDoubleArrowDown } from "react-icons/md";
 
 const Orders = () => {
 
     const [currentPage, setCurrentPage] = useState(1);
     const [searchValue, setSearchValue] = useState('');
     const [parPage, setParPage] = useState(5);
+    const [show, setShow] = useState(false);
 
     return (
         <div className="px-2 lg:px-7 pt-5">
@@ -32,7 +34,7 @@ const Orders = () => {
                                 <div className="py-3 w-[8%] font-bold"><BsBoxArrowInDown /></div>
                             </div>
                         </div>
-                        {/* ********************************************************************** */}
+                        {/* ****************************** td **************************************** */}
                         <div className=" text-[#d0d2d6] ">
                             <div className="flex justify-between items-start border-b border-slate-700">
                                 <div className="py-3 w-[25%] font-medium whitespace-nowrap">#11111</div>
@@ -40,9 +42,150 @@ const Orders = () => {
                                 <div className="py-3 w-[18%] font-medium">pending</div>
                                 <div className="py-3 w-[18%] font-medium">pending</div>
                                 <div className="py-3 w-[18%] font-medium">view</div>
-                                <div className="py-3 w-[8%] font-medium"><BsBoxArrowInDown /></div>
+                                <div onClick={(e) => setShow(!show)} className="py-3 w-[8%] font-medium cursor-pointer"><MdKeyboardDoubleArrowDown /></div>
+                            </div>
+                            {/* ---------------------------------show --------------------------- */}
+                            <div className={show ? 'block border-b border-slate-700 bg-[##8282b3]' : 'hidden'}>
+                                <div className="flex justify-start items-start border-b border-slate-700 bg-[#808EEC] text-[#d0d2d6]">
+                                    <div className="py-3 w-[25%] font-medium whitespace-nowrap pl-3">#11111</div>
+                                    <div className="py-3 w-[13%] font-medium">$5456</div>
+                                    <div className="py-3 w-[18%] font-medium">pending</div>
+                                    <div className="py-3 w-[18%] font-medium">pending</div>
+                                </div>
+                            </div>
+                            {/* --------------------------------end show 1--------------------------- */}
+                            <div className={show ? 'block border-b border-slate-700 bg-[##8282b3]' : 'hidden'}>
+                                <div className="flex justify-start items-start border-b border-slate-700 bg-[#808EEC] text-[#d0d2d6]">
+                                    <div className="py-3 w-[25%] font-medium whitespace-nowrap pl-3">#11111</div>
+                                    <div className="py-3 w-[13%] font-medium">$5456</div>
+                                    <div className="py-3 w-[18%] font-medium">pending</div>
+                                    <div className="py-3 w-[18%] font-medium">pending</div>
+                                </div>
                             </div>
                         </div>
+                        {/* ****************************** end td ************************************* */}
+                        {/* ****************************** td **************************************** */}
+                        <div className=" text-[#d0d2d6] ">
+                            <div className="flex justify-between items-start border-b border-slate-700">
+                                <div className="py-3 w-[25%] font-medium whitespace-nowrap">#11111</div>
+                                <div className="py-3 w-[13%] font-medium">$5456</div>
+                                <div className="py-3 w-[18%] font-medium">pending</div>
+                                <div className="py-3 w-[18%] font-medium">pending</div>
+                                <div className="py-3 w-[18%] font-medium">view</div>
+                                <div onClick={(e) => setShow(!show)} className="py-3 w-[8%] font-medium cursor-pointer"><MdKeyboardDoubleArrowDown /></div>
+                            </div>
+                            {/* ---------------------------------show --------------------------- */}
+                            <div className={show ? 'block border-b border-slate-700 bg-[##8282b3]' : 'hidden'}>
+                                <div className="flex justify-start items-start border-b border-slate-700 bg-[#808EEC] text-[#d0d2d6]">
+                                    <div className="py-3 w-[25%] font-medium whitespace-nowrap pl-3">#11111</div>
+                                    <div className="py-3 w-[13%] font-medium">$5456</div>
+                                    <div className="py-3 w-[18%] font-medium">pending</div>
+                                    <div className="py-3 w-[18%] font-medium">pending</div>
+                                </div>
+                            </div>
+                            {/* --------------------------------end show 1--------------------------- */}
+                            <div className={show ? 'block border-b border-slate-700 bg-[##8282b3]' : 'hidden'}>
+                                <div className="flex justify-start items-start border-b border-slate-700 bg-[#808EEC] text-[#d0d2d6]">
+                                    <div className="py-3 w-[25%] font-medium whitespace-nowrap pl-3">#11111</div>
+                                    <div className="py-3 w-[13%] font-medium">$5456</div>
+                                    <div className="py-3 w-[18%] font-medium">pending</div>
+                                    <div className="py-3 w-[18%] font-medium">pending</div>
+                                </div>
+                            </div>
+                        </div>
+                        {/* ****************************** end td ************************************* */}
+                        {/* ****************************** td **************************************** */}
+                        <div className=" text-[#d0d2d6] ">
+                            <div className="flex justify-between items-start border-b border-slate-700">
+                                <div className="py-3 w-[25%] font-medium whitespace-nowrap">#11111</div>
+                                <div className="py-3 w-[13%] font-medium">$5456</div>
+                                <div className="py-3 w-[18%] font-medium">pending</div>
+                                <div className="py-3 w-[18%] font-medium">pending</div>
+                                <div className="py-3 w-[18%] font-medium">view</div>
+                                <div onClick={(e) => setShow(!show)} className="py-3 w-[8%] font-medium cursor-pointer"><MdKeyboardDoubleArrowDown /></div>
+                            </div>
+                            {/* ---------------------------------show --------------------------- */}
+                            <div className={show ? 'block border-b border-slate-700 bg-[##8282b3]' : 'hidden'}>
+                                <div className="flex justify-start items-start border-b border-slate-700 bg-[#808EEC] text-[#d0d2d6]">
+                                    <div className="py-3 w-[25%] font-medium whitespace-nowrap pl-3">#11111</div>
+                                    <div className="py-3 w-[13%] font-medium">$5456</div>
+                                    <div className="py-3 w-[18%] font-medium">pending</div>
+                                    <div className="py-3 w-[18%] font-medium">pending</div>
+                                </div>
+                            </div>
+                            {/* --------------------------------end show 1--------------------------- */}
+                            <div className={show ? 'block border-b border-slate-700 bg-[##8282b3]' : 'hidden'}>
+                                <div className="flex justify-start items-start border-b border-slate-700 bg-[#808EEC] text-[#d0d2d6]">
+                                    <div className="py-3 w-[25%] font-medium whitespace-nowrap pl-3">#11111</div>
+                                    <div className="py-3 w-[13%] font-medium">$5456</div>
+                                    <div className="py-3 w-[18%] font-medium">pending</div>
+                                    <div className="py-3 w-[18%] font-medium">pending</div>
+                                </div>
+                            </div>
+                        </div>
+                        {/* ****************************** end td ************************************* */}
+                        {/* ****************************** td **************************************** */}
+                        <div className=" text-[#d0d2d6] ">
+                            <div className="flex justify-between items-start border-b border-slate-700">
+                                <div className="py-3 w-[25%] font-medium whitespace-nowrap">#11111</div>
+                                <div className="py-3 w-[13%] font-medium">$5456</div>
+                                <div className="py-3 w-[18%] font-medium">pending</div>
+                                <div className="py-3 w-[18%] font-medium">pending</div>
+                                <div className="py-3 w-[18%] font-medium">view</div>
+                                <div onClick={(e) => setShow(!show)} className="py-3 w-[8%] font-medium cursor-pointer"><MdKeyboardDoubleArrowDown /></div>
+                            </div>
+                            {/* ---------------------------------show --------------------------- */}
+                            <div className={show ? 'block border-b border-slate-700 bg-[##8282b3]' : 'hidden'}>
+                                <div className="flex justify-start items-start border-b border-slate-700 bg-[#808EEC] text-[#d0d2d6]">
+                                    <div className="py-3 w-[25%] font-medium whitespace-nowrap pl-3">#11111</div>
+                                    <div className="py-3 w-[13%] font-medium">$5456</div>
+                                    <div className="py-3 w-[18%] font-medium">pending</div>
+                                    <div className="py-3 w-[18%] font-medium">pending</div>
+                                </div>
+                            </div>
+                            {/* --------------------------------end show 1--------------------------- */}
+                            <div className={show ? 'block border-b border-slate-700 bg-[##8282b3]' : 'hidden'}>
+                                <div className="flex justify-start items-start border-b border-slate-700 bg-[#808EEC] text-[#d0d2d6]">
+                                    <div className="py-3 w-[25%] font-medium whitespace-nowrap pl-3">#11111</div>
+                                    <div className="py-3 w-[13%] font-medium">$5456</div>
+                                    <div className="py-3 w-[18%] font-medium">pending</div>
+                                    <div className="py-3 w-[18%] font-medium">pending</div>
+                                </div>
+                            </div>
+                        </div>
+                        {/* ****************************** end td ************************************* */}
+                        {/* ****************************** td **************************************** */}
+                        <div className=" text-[#d0d2d6] ">
+                            <div className="flex justify-between items-start border-b border-slate-700">
+                                <div className="py-3 w-[25%] font-medium whitespace-nowrap">#11111</div>
+                                <div className="py-3 w-[13%] font-medium">$5456</div>
+                                <div className="py-3 w-[18%] font-medium">pending</div>
+                                <div className="py-3 w-[18%] font-medium">pending</div>
+                                <div className="py-3 w-[18%] font-medium">view</div>
+                                <div onClick={(e) => setShow(!show)} className="py-3 w-[8%] font-medium cursor-pointer"><MdKeyboardDoubleArrowDown /></div>
+                            </div>
+                            {/* ---------------------------------show --------------------------- */}
+                            <div className={show ? 'block border-b border-slate-700 bg-[##8282b3]' : 'hidden'}>
+                                <div className="flex justify-start items-start border-b border-slate-700 bg-[#808EEC] text-[#d0d2d6]">
+                                    <div className="py-3 w-[25%] font-medium whitespace-nowrap pl-3">#11111</div>
+                                    <div className="py-3 w-[13%] font-medium">$5456</div>
+                                    <div className="py-3 w-[18%] font-medium">pending</div>
+                                    <div className="py-3 w-[18%] font-medium">pending</div>
+                                </div>
+                            </div>
+                            {/* --------------------------------end show 1--------------------------- */}
+                            <div className={show ? 'block border-b border-slate-700 bg-[##8282b3]' : 'hidden'}>
+                                <div className="flex justify-start items-start border-b border-slate-700 bg-[#808EEC] text-[#d0d2d6]">
+                                    <div className="py-3 w-[25%] font-medium whitespace-nowrap pl-3">#11111</div>
+                                    <div className="py-3 w-[13%] font-medium">$5456</div>
+                                    <div className="py-3 w-[18%] font-medium">pending</div>
+                                    <div className="py-3 w-[18%] font-medium">pending</div>
+                                </div>
+                            </div>
+                        </div>
+                        {/* ****************************** end td ************************************* */}
+
+
                     </div>
                 </div>
             </div>
