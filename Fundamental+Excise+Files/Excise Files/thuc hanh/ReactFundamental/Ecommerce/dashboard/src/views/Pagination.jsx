@@ -1,5 +1,5 @@
 import React from 'react'
-import { MdKeyboardDoubleArrowLeft } from "react-icons/md";
+import { MdKeyboardDoubleArrowLeft, MdKeyboardDoubleArrowRight } from "react-icons/md";
 
 
 const Pagination = ({ pageNumber, setPageNumber, totalItem, parPage, showItems }) => {
@@ -19,8 +19,8 @@ const Pagination = ({ pageNumber, setPageNumber, totalItem, parPage, showItems }
         const btns = [];
         for (let i = startPage; i < endPage; i++) {
             btns.push(
-                <li 
-                onClick={() => setPageNumber(i)}
+                <li
+                    onClick={() => setPageNumber(i)}
                     key={i} // Thêm key để tránh lỗi React
                     className={`w-[33px] h-[33px] rounded-full flex justify-center items-center cursor-pointer
                     ${pageNumber === i
@@ -40,9 +40,12 @@ const Pagination = ({ pageNumber, setPageNumber, totalItem, parPage, showItems }
         <ul className='flex gap-3'>
 
             {
-                pageNumber > 1 && <li className='w-[33px] h-[33px] rounded-full flex justify-center items-center bg-slate-300 text-[#000000]'><MdKeyboardDoubleArrowLeft /></li>
+                pageNumber > 1 && <li onClick={() => setPageNumber(pageNumber - 1)} className='w-[33px] h-[33px] rounded-full flex justify-center items-center bg-slate-300 text-[#000000] cursor-pointer'><MdKeyboardDoubleArrowLeft /></li>
             }{
                 createBtn()
+            }
+            {
+                pageNumber < totalPage && <li onClick={() => setPageNumber(pageNumber + 1)} className='w-[33px] h-[33px] rounded-full flex justify-center items-center bg-slate-300 text-[#000000] cursor-pointer'><MdKeyboardDoubleArrowRight /></li>
             }
 
         </ul>
