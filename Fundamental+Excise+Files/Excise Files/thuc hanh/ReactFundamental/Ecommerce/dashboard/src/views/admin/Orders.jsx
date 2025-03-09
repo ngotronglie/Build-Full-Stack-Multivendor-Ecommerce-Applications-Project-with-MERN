@@ -45,7 +45,7 @@ const Orders = () => {
                                 <div onClick={(e) => setShow(!show)} className="py-3 w-[8%] font-medium cursor-pointer"><MdKeyboardDoubleArrowDown /></div>
                             </div>
                             {/* ---------------------------------show --------------------------- */}
-                            <div className={show ? 'block border-b border-slate-700 bg-[##8282b3]' : 'hidden'}>
+                            <div className={show ? 'block border-b border-slate-700 bg-[#8282b3]' : 'hidden'}>
                                 <div className="flex justify-start items-start border-b border-slate-700 bg-[#808EEC] text-[#d0d2d6]">
                                     <div className="py-3 w-[25%] font-medium whitespace-nowrap pl-3">#11111</div>
                                     <div className="py-3 w-[13%] font-medium">$5456</div>
@@ -54,7 +54,7 @@ const Orders = () => {
                                 </div>
                             </div>
                             {/* --------------------------------end show 1--------------------------- */}
-                            <div className={show ? 'block border-b border-slate-700 bg-[##8282b3]' : 'hidden'}>
+                            <div className={show ? 'block border-b border-slate-700 bg-[#8282b3]' : 'hidden'}>
                                 <div className="flex justify-start items-start border-b border-slate-700 bg-[#808EEC] text-[#d0d2d6]">
                                     <div className="py-3 w-[25%] font-medium whitespace-nowrap pl-3">#11111</div>
                                     <div className="py-3 w-[13%] font-medium">$5456</div>
@@ -75,7 +75,7 @@ const Orders = () => {
                                 <div onClick={(e) => setShow(!show)} className="py-3 w-[8%] font-medium cursor-pointer"><MdKeyboardDoubleArrowDown /></div>
                             </div>
                             {/* ---------------------------------show --------------------------- */}
-                            <div className={show ? 'block border-b border-slate-700 bg-[##8282b3]' : 'hidden'}>
+                            <div className={show ? 'block border-b border-slate-700 bg-[#8282b3]' : 'hidden'}>
                                 <div className="flex justify-start items-start border-b border-slate-700 bg-[#808EEC] text-[#d0d2d6]">
                                     <div className="py-3 w-[25%] font-medium whitespace-nowrap pl-3">#11111</div>
                                     <div className="py-3 w-[13%] font-medium">$5456</div>
@@ -84,7 +84,7 @@ const Orders = () => {
                                 </div>
                             </div>
                             {/* --------------------------------end show 1--------------------------- */}
-                            <div className={show ? 'block border-b border-slate-700 bg-[##8282b3]' : 'hidden'}>
+                            <div className={show ? 'block border-b border-slate-700 bg-[#8282b3]' : 'hidden'}>
                                 <div className="flex justify-start items-start border-b border-slate-700 bg-[#808EEC] text-[#d0d2d6]">
                                     <div className="py-3 w-[25%] font-medium whitespace-nowrap pl-3">#11111</div>
                                     <div className="py-3 w-[13%] font-medium">$5456</div>
@@ -105,7 +105,7 @@ const Orders = () => {
                                 <div onClick={(e) => setShow(!show)} className="py-3 w-[8%] font-medium cursor-pointer"><MdKeyboardDoubleArrowDown /></div>
                             </div>
                             {/* ---------------------------------show --------------------------- */}
-                            <div className={show ? 'block border-b border-slate-700 bg-[##8282b3]' : 'hidden'}>
+                            <div className={show ? 'block border-b border-slate-700 bg-[#8282b3]' : 'hidden'}>
                                 <div className="flex justify-start items-start border-b border-slate-700 bg-[#808EEC] text-[#d0d2d6]">
                                     <div className="py-3 w-[25%] font-medium whitespace-nowrap pl-3">#11111</div>
                                     <div className="py-3 w-[13%] font-medium">$5456</div>
@@ -114,7 +114,7 @@ const Orders = () => {
                                 </div>
                             </div>
                             {/* --------------------------------end show 1--------------------------- */}
-                            <div className={show ? 'block border-b border-slate-700 bg-[##8282b3]' : 'hidden'}>
+                            <div className={show ? 'block border-b border-slate-700 bg-[#8282b3]' : 'hidden'}>
                                 <div className="flex justify-start items-start border-b border-slate-700 bg-[#808EEC] text-[#d0d2d6]">
                                     <div className="py-3 w-[25%] font-medium whitespace-nowrap pl-3">#11111</div>
                                     <div className="py-3 w-[13%] font-medium">$5456</div>
@@ -135,7 +135,7 @@ const Orders = () => {
                                 <div onClick={(e) => setShow(!show)} className="py-3 w-[8%] font-medium cursor-pointer"><MdKeyboardDoubleArrowDown /></div>
                             </div>
                             {/* ---------------------------------show --------------------------- */}
-                            <div className={show ? 'block border-b border-slate-700 bg-[##8282b3]' : 'hidden'}>
+                            <div className={show ? 'block border-b border-slate-700 bg-[#8282b3]' : 'hidden'}>
                                 <div className="flex justify-start items-start border-b border-slate-700 bg-[#808EEC] text-[#d0d2d6]">
                                     <div className="py-3 w-[25%] font-medium whitespace-nowrap pl-3">#11111</div>
                                     <div className="py-3 w-[13%] font-medium">$5456</div>
@@ -144,7 +144,7 @@ const Orders = () => {
                                 </div>
                             </div>
                             {/* --------------------------------end show 1--------------------------- */}
-                            <div className={show ? 'block border-b border-slate-700 bg-[##8282b3]' : 'hidden'}>
+                            <div className={show ? 'block border-b border-slate-700 bg-[#8282b3]' : 'hidden'}>
                                 <div className="flex justify-start items-start border-b border-slate-700 bg-[#808EEC] text-[#d0d2d6]">
                                     <div className="py-3 w-[25%] font-medium whitespace-nowrap pl-3">#11111</div>
                                     <div className="py-3 w-[13%] font-medium">$5456</div>
@@ -165,7 +165,7 @@ const Orders = () => {
                                 <div onClick={(e) => setShow(!show)} className="py-3 w-[8%] font-medium cursor-pointer"><MdKeyboardDoubleArrowDown /></div>
                             </div>
                             {/* ---------------------------------show --------------------------- */}
-                            <div className={show ? 'block border-b border-slate-700 bg-[##8282b3]' : 'hidden'}>
+                            <div className={show ? 'block border-b border-slate-700 bg-[#8282b3]' : 'hidden'}>
                                 <div className="flex justify-start items-start border-b border-slate-700 bg-[#808EEC] text-[#d0d2d6]">
                                     <div className="py-3 w-[25%] font-medium whitespace-nowrap pl-3">#11111</div>
                                     <div className="py-3 w-[13%] font-medium">$5456</div>
@@ -174,7 +174,7 @@ const Orders = () => {
                                 </div>
                             </div>
                             {/* --------------------------------end show 1--------------------------- */}
-                            <div className={show ? 'block border-b border-slate-700 bg-[##8282b3]' : 'hidden'}>
+                            <div className={show ? 'block border-b border-slate-700 bg-[#8282b3]' : 'hidden'}>
                                 <div className="flex justify-start items-start border-b border-slate-700 bg-[#808EEC] text-[#d0d2d6]">
                                     <div className="py-3 w-[25%] font-medium whitespace-nowrap pl-3">#11111</div>
                                     <div className="py-3 w-[13%] font-medium">$5456</div>
