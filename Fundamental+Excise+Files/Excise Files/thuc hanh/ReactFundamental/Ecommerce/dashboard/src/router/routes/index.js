@@ -1,5 +1,5 @@
 import { privateRoutes } from './privateRoutes';
-import MainLayout from './../../layout/MainLayout';
+import MainLayout from '../../layout/MainLayout';
 import { Children } from 'react';
 
 

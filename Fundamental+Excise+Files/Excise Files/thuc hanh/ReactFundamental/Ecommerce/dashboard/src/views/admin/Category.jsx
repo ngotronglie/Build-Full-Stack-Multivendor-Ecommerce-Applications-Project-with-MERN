@@ -3,6 +3,7 @@ import { BsBoxArrowInDown } from "react-icons/bs";
 import { MdKeyboardDoubleArrowDown } from "react-icons/md";
 import Pagination from "../Pagination";
 import { Link } from "react-router-dom";
+import { FaEdit, FaTrash } from "react-icons/fa";
 
 const Category = () => {
     const [parPage, setParPage] = useState(5);
@@ -34,10 +35,32 @@ const Category = () => {
                                     {
                                         [1, 2, 3, 4, 5].map((d, i) =>
                                             <tr>
-                                                <td scope='row' className='py-3 px-4 font-medium whitespace-nowrap'>#34343</td>
-                                                <td scope='row' className='py-3 px-4 font-medium whitespace-nowrap'>#34343</td>
-                                                <td scope='row' className='py-3 px-4 font-medium whitespace-nowrap'>pending</td>
-                                                <td scope='row' className='py-3 px-4 font-medium whitespace-nowrap'>pending</td>
+                                                <td scope='row' className='py-1 px-4 font-medium whitespace-nowrap'>#34343</td>
+                                                <td scope='row' className='py-1 px-4 font-medium whitespace-nowrap'>
+                                                    <img
+                                                        className="w-[45px] h-[45px]"
+                                                        src={`http://localhost:3000/images/category/${d}.jpg`}
+                                                        alt="Category Image"
+                                                    />
+
+                                                </td>
+                                                <td scope='row' className='py-1 px-4 font-medium whitespace-nowrap'>pending</td>
+                                                <td scope='row' className='py-1 px-4 font-medium whitespace-nowrap'>
+                                                    <div className="flex justify-start items-center gap-4">
+                                                        <Link
+                                                            className="p-[6px] bg-yellow-500 rounded hover:shadow-lg hover:shadow-yellow-500/50"
+                                                        >
+                                                            <FaEdit />
+                                                        </Link>
+
+                                                        <Link
+                                                            className="p-[6px] bg-red-500 rounded hover:shadow-lg hover:shadow-red-500/50"
+                                                        >
+                                                            <FaTrash />
+                                                        </Link>
+                                                    </div>
+
+                                                </td>
                                             </tr>
                                         )
                                     }
