@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { FaEdit, FaEye } from 'react-icons/fa';
 import { FaTrash } from 'react-icons/fa';
 
-const Sellers = () => {
+const DeactiveSellers = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const [searchValue, setSearchValue] = useState('');
     const [parPage, setParPage] = useState(5);
@@ -46,11 +46,9 @@ const Sellers = () => {
                                     "No",
                                     "Image",
                                     "Name",
-                                    "Shop Name",
-                                    "Payment Status",
                                     "Email",
-                                    "Division",
-                                    "District",
+                                    "Payment status",
+                                    "status",
                                     "Action",
                                 ].map((header) => (
                                     <th key={header} scope="col" className="py-3 px-4">
@@ -72,11 +70,9 @@ const Sellers = () => {
                                         />
                                     </td>
                                     <td className="py-3 px-4 font-medium whitespace-nowrap">Product {i + 1}</td>
-                                    <td className="py-3 px-4 font-medium whitespace-nowrap">Shop {i + 1}</td>
-                                    <td className="py-3 px-4 font-medium whitespace-nowrap text-yellow-500">Pending</td>
                                     <td className="py-3 px-4 font-medium whitespace-nowrap">user{i + 1}@email.com</td>
-                                    <td className="py-3 px-4 font-medium whitespace-nowrap">Division {i + 1}</td>
-                                    <td className="py-3 px-4 font-medium whitespace-nowrap">District {i + 1}</td>
+                                    <td className="py-3 px-4 font-medium whitespace-nowrap text-yellow-500">Pending</td>
+                                    <td className="py-3 px-4 font-medium whitespace-nowrap">Deactive</td>
                                     <td className="py-3 px-4 font-medium whitespace-nowrap">
                                         <div className="flex justify-start items-center gap-4">
                                             <Link
@@ -89,6 +85,7 @@ const Sellers = () => {
                                 </tr>
                             ))}
                         </tbody>
+
 
                     </table>
                 </div>
@@ -107,4 +104,4 @@ const Sellers = () => {
     )
 }
 
-export default Sellers;
+export default DeactiveSellers;
