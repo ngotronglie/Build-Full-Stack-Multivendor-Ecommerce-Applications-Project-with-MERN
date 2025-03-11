@@ -65,11 +65,11 @@ const PaymentRequest = () => {
                                 style={{ minWidth: '340px' }}
                                 className="List"
                                 height={350}
-                                itemCount={10}
+                                itemCount={1000}
                                 itemSize={35}
                                 outerElementType={outerElementType}
                             >
-                                {({ index, style }) => <Row index={index} style={style} />}
+                                {Row}
                             </List>
 
 
