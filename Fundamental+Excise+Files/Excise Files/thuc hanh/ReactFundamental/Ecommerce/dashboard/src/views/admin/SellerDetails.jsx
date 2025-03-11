@@ -45,6 +45,55 @@ const SellerDetails = () => {
                             </div>
                         </div>
                     </div>
+                    <div className="w-4/12">
+                        <div className="px-0 md:px-5 py-2">
+                            <div className="py-2 text-lg">
+                                <h2>Address</h2>
+                            </div>
+                            <div className="flex flex-col justify-between text-sm gap-2 p-4 bg-[#9e97e9] rounded-md">
+                                <div className="flex gap-2 font-bold text-[#000000]">
+                                    <span>Shop Name :</span>
+                                    <span>Easy shop</span>
+                                </div>
+                                <div className="flex gap-2 font-bold text-[#000000]">
+                                    <span>Divission :</span>
+                                    <span>doan xem</span>
+                                </div>
+                                <div className="flex gap-2 font-bold text-[#000000]">
+                                    <span>District :</span>
+                                    <span> doan xem </span>
+                                </div>
+                                <div className="flex gap-2 font-bold text-[#000000]">
+                                    <span>State :</span>
+                                    <span>doan xem</span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div>
+                    <form>
+                        <div className="flex gap-4 py-3">
+                            <select
+                                className="px-4 py-2 focus:border-indigo-500 outline-none bg-[#6a5fdf] border border-slate-700 rounded-md text-[#d0d2d6]"
+                                name="status"
+                                id="status"
+                            >
+                                <option value="">-- Select Status --</option>
+                                <option value="active">Active</option>
+                                <option value="inactive">Inactive</option>
+                            </select>
+                            <button
+                                className="bg-red-500 w-[170px] hover:shadow-red-500/40 hover:shadow-md text-white rounded-md px-7 py-2"
+                            >
+                                Submit
+                            </button>
+                        </div>
+
+
+                    </form>
 
                 </div>
             </div>
