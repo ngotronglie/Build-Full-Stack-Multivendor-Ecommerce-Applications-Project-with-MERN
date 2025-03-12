@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { BsBoxArrowInDown } from "react-icons/bs";
 import { MdKeyboardDoubleArrowDown } from "react-icons/md";
 import Pagination from "../Pagination";
+import { Link } from 'react-router-dom';
 const Orders = () => {
 
     const [currentPage, setCurrentPage] = useState(1);
@@ -41,7 +42,7 @@ const Orders = () => {
                                 <div className="py-3 w-[13%] font-medium">$5456</div>
                                 <div className="py-3 w-[18%] font-medium">pending</div>
                                 <div className="py-3 w-[18%] font-medium">pending</div>
-                                <div className="py-3 w-[18%] font-medium">view</div>
+                                <div className="py-3 w-[18%] font-medium"><Link to='/admin/dashboard/order/details/2' >view</Link></div>
                                 <div onClick={(e) => setShow(!show)} className="py-3 w-[8%] font-medium cursor-pointer"><MdKeyboardDoubleArrowDown /></div>
                             </div>
                             {/* ---------------------------------show --------------------------- */}
@@ -71,7 +72,7 @@ const Orders = () => {
                                 <div className="py-3 w-[13%] font-medium">$5456</div>
                                 <div className="py-3 w-[18%] font-medium">pending</div>
                                 <div className="py-3 w-[18%] font-medium">pending</div>
-                                <div className="py-3 w-[18%] font-medium">view</div>
+                                <div className="py-3 w-[18%] font-medium"><Link to='/admin/dashboard/order/details/2' >view</Link></div>
                                 <div onClick={(e) => setShow(!show)} className="py-3 w-[8%] font-medium cursor-pointer"><MdKeyboardDoubleArrowDown /></div>
                             </div>
                             {/* ---------------------------------show --------------------------- */}
@@ -101,7 +102,7 @@ const Orders = () => {
                                 <div className="py-3 w-[13%] font-medium">$5456</div>
                                 <div className="py-3 w-[18%] font-medium">pending</div>
                                 <div className="py-3 w-[18%] font-medium">pending</div>
-                                <div className="py-3 w-[18%] font-medium">view</div>
+                                <div className="py-3 w-[18%] font-medium"><Link to='/admin/dashboard/order/details/2' >view</Link></div>
                                 <div onClick={(e) => setShow(!show)} className="py-3 w-[8%] font-medium cursor-pointer"><MdKeyboardDoubleArrowDown /></div>
                             </div>
                             {/* ---------------------------------show --------------------------- */}
@@ -131,7 +132,7 @@ const Orders = () => {
                                 <div className="py-3 w-[13%] font-medium">$5456</div>
                                 <div className="py-3 w-[18%] font-medium">pending</div>
                                 <div className="py-3 w-[18%] font-medium">pending</div>
-                                <div className="py-3 w-[18%] font-medium">view</div>
+                                <div className="py-3 w-[18%] font-medium"><Link to='/admin/dashboard/order/details/2' >view</Link></div>
                                 <div onClick={(e) => setShow(!show)} className="py-3 w-[8%] font-medium cursor-pointer"><MdKeyboardDoubleArrowDown /></div>
                             </div>
                             {/* ---------------------------------show --------------------------- */}
@@ -161,7 +162,7 @@ const Orders = () => {
                                 <div className="py-3 w-[13%] font-medium">$5456</div>
                                 <div className="py-3 w-[18%] font-medium">pending</div>
                                 <div className="py-3 w-[18%] font-medium">pending</div>
-                                <div className="py-3 w-[18%] font-medium">view</div>
+                                <div className="py-3 w-[18%] font-medium"><Link to='/admin/dashboard/order/details/2' >view</Link></div>
                                 <div onClick={(e) => setShow(!show)} className="py-3 w-[8%] font-medium cursor-pointer"><MdKeyboardDoubleArrowDown /></div>
                             </div>
                             {/* ---------------------------------show --------------------------- */}
