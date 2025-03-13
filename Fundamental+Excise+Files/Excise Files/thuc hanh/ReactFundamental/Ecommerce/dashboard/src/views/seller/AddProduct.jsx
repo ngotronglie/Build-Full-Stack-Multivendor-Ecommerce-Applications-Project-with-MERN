@@ -110,7 +110,7 @@ const AddProduct = () => {
                                     type="text"
                                     id="category"
                                     className="px-4 py-2 focus:border-indigo-500 outline-none bg-[#6a5fdf] border border-slate-700 rounded-md text-[#d0d2d6]"
-                                    placeholder="category"
+                                    placeholder="-- select category --"
                                     value={category}
                                 />
                                 <div className={`absolute top-[101%] bg-[#475569] w-full transition-all ${cateShow ? 'scale-100' : 'scale-0'}`}>
@@ -162,6 +162,47 @@ const AddProduct = () => {
                                 />
 
                             </div>
+                        </div>
+                        <div className="flex flex-col mb-3 md:flex-row gap-4 w-full text-[#d0d2d6]">
+                            <div className="flex flex-col w-full gap-1">
+                                <label htmlFor="price">Price</label>
+                                <input
+                                    name="price"
+                                    onChange={inputHandle}
+                                    value={state.price}
+                                    type="number"
+                                    id="price"
+                                    className="px-4 py-2 focus:border-indigo-500 outline-none bg-[#6a5fdf] border border-slate-700 rounded-md text-[#d0d2d6]"
+                                    placeholder="Price"
+                                />
+
+                            </div>
+                            <div className="flex flex-col w-full gap-1">
+                                <label htmlFor="discount">discount</label>
+                                <input
+                                    name="discount"
+                                    onChange={inputHandle}
+                                    value={state.discount}
+                                    type="text"
+                                    id="discount"
+                                    className="px-4 py-2 focus:border-indigo-500 outline-none bg-[#6a5fdf] border border-slate-700 rounded-md text-[#d0d2d6]"
+                                    placeholder="discount by%"
+                                />
+
+                            </div>
+                        </div>
+                        <div className="flex flex-col w-full gap-1 text-[#d0d2d6]">
+                            <label htmlFor="description">description</label>
+                            <textarea
+                                name="description"
+                                onChange={inputHandle}
+                                value={state.description}
+                                id="description"
+                                className="px-4 py-2 focus:border-indigo-500 outline-none bg-[#6a5fdf] border border-slate-700 rounded-md text-[#d0d2d6]"
+                                placeholder="description "
+                                cols="10"
+                                rows="4"
+                            />
                         </div>
                     </form>
 
