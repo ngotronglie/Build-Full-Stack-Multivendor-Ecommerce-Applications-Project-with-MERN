@@ -3,6 +3,28 @@ import { Link } from 'react-router-dom';
 
 
 const AddProduct = () => {
+    const categorys = [
+        {
+            id: 1,
+            name: 'sport',
+        },
+        {
+            id: 2,
+            name: 'mobile',
+        },
+        {
+            id: 3,
+            name: 'watch',
+        },
+        {
+            id: 4,
+            name: 'computer',
+        },
+        {
+            id: 5,
+            name: 'televition',
+        }
+    ]
 
 
     const [state, setState] = useState({
@@ -13,6 +35,14 @@ const AddProduct = () => {
         stock: '',
 
     })
+
+    const [cateShow, setCateShow] = useState(false);
+    const [category, setCategory] = useState('');
+    const [allCategory, setAllCategory] = useState([]);
+    const [searchValue, setSearchValue] = useState('');
+    const categorySearch = (e) => {
+        const value = e.target.value;
+    }
 
     const inputHandle = (e) => {
         setState({ ...state, [e.target.name]: e.target.value });
@@ -64,18 +94,20 @@ const AddProduct = () => {
                             <div className="flex flex-col w-full gap-1 relative">
                                 <label htmlFor="category">category</label>
                                 <input
+                                    readOnly onClick={() => setCateShow(!cateShow)}
                                     name="category"
                                     onChange={inputHandle}
-                                    value={state.name}
+                                    value={state.category}
                                     type="text"
-                                    id="name"
+                                    id="category"
                                     className="px-4 py-2 focus:border-indigo-500 outline-none bg-[#6a5fdf] border border-slate-700 rounded-md text-[#d0d2d6]"
-                                    placeholder="Product name"
+                                    placeholder="category"
                                 />
-                                <div className={`absolute top-[101%] bg-slate-800 w-full transition-all ${cateShow ? 'scale-100' : 'scale-0'}`}>
+                                <div className={`absolute top-[101%] bg-[#475569] w-full transition-all ${cateShow ? 'scale-100' : 'scale-0'}`}>
                                     <div className="w-full px-4 py-2 fixed">
                                         <input
-                                            className="px-3 py-1 focus:border-indigo-500 outline-none bg-transparent border border-slate-700 rounded-md text-[#d0d2d6] overflow-hidden"
+                                            onChange={categorySearch}
+                                            className="px-3 w-full py-1 focus:border-indigo-500 outline-none bg-transparent border border-slate-700 rounded-md text-[#d0d2d6] overflow-hidden"
                                             type="text"
                                             placeholder="search"
                                         />
@@ -90,7 +122,7 @@ const AddProduct = () => {
                                                 setCategory(c.name);
                                                 setSearchValue('')
                                                 setAllCategory(categorys)
-                                            }}></span>)
+                                            }}>{c.name}</span>)
                                         }
                                     </div>
                                 </div>
@@ -119,5 +151,6 @@ const AddProduct = () => {
 
     )
 }
+
 
 export default AddProduct;
