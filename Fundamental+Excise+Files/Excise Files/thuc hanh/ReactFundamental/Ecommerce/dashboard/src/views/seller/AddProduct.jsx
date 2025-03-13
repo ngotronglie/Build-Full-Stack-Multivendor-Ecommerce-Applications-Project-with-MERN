@@ -32,9 +32,9 @@ const AddProduct = () => {
         name: '',
         description: '',
         price: '',
+        discount: '',
         brand: '',
         stock: '',
-
     })
 
     const [cateShow, setCateShow] = useState(false);
@@ -55,12 +55,30 @@ const AddProduct = () => {
 
     }
     const [images, setImages] = useState([]);
-    const [imageShow, setImageShow] = useState(false);
+    const [imageShow, setImageShow] = useState([]);
     const imageHandle = (e) => {
         const files = e.target.files;
         const length = files.length;
         if (length > 0) {
             setImages([...images, ...files])
+            let imageUrl = []
+            for (let i = 0; i < length; i++) {
+                imageUrl.push({ url: URL.createObjectURL(files[i]) })
+            }
+            setImageShow([...imageShow, ...imageUrl])
+        }
+    }
+
+    // console.log(images);
+    // console.log(imageShow);
+    const changeImage = (img, index) => {
+        if (img) {
+            let tempUrl = imageShow;
+            let tempImages = images;
+            tempImages[index] = img;
+            tempUrl[index] = { url: URL.createObjectURL(img) };
+            setImageShow([...tempUrl]);
+            setImages([...tempImages]);
         }
     }
 
@@ -217,6 +235,24 @@ const AddProduct = () => {
 
 
                         <div className='grid lg:grid-cols-4 grid-cols-1 md:grid-cols-3 sm:grid-cols-2 sm:gap-4 md:gap-4 gap-3 w-full text-[#d0d2d6] mb-4'>
+                            {
+                                imageShow.map((img, i) => (
+
+                                    <div className='h-[180px] relative'>
+                                        <label htmlFor={i}>
+                                            <img className='w-full h-full rounded-sm' src={img.url} alt="" />
+                                        </label>
+                                        <input
+                                            onChange={(e) => changeImage(e.target.files[0], i)}
+                                            type="file"
+                                            id={i}
+                                            className='hidden'
+                                        />
+                                    </div>
+                                ))
+                            }
+
+
                             <label className='flex justify-center items-center flex-col h-[180px] cursor-pointer border border-dashed hover:border-red-500 w-full text-[#d0d2d6]' htmlFor="image">
                                 <span><IoMdImages /></span>
                                 <span>Select Image</span>
