@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { IoMdImages } from 'react-icons/io';
+import { IoMdCloseCircle, IoMdImages } from 'react-icons/io';
 import { Link } from 'react-router-dom';
 
 
@@ -80,6 +80,13 @@ const AddProduct = () => {
             setImageShow([...tempUrl]);
             setImages([...tempImages]);
         }
+    }
+
+    const removeImage = (i) => {
+        const filterImage = images.filter((img, index) => index !== i);
+        const filterImageUrl = imageShow.filter((img, index) => index !== i);
+        setImages(filterImage);
+        setImageShow(filterImageUrl);
     }
 
     const inputHandle = (e) => {
@@ -234,7 +241,7 @@ const AddProduct = () => {
                         </div>
 
 
-                        <div className='grid lg:grid-cols-4 grid-cols-1 md:grid-cols-3 sm:grid-cols-2 sm:gap-4 md:gap-4 gap-3 w-full text-[#d0d2d6] mb-4'>
+                        <div className='grid lg:grid-cols-4 grid-cols-1 md:grid-cols-3 sm:grid-cols-2 sm:gap-4 md:gap-4 gap-3 w-full text-[#d0d2d6] mb-4 mt-4'>
                             {
                                 imageShow.map((img, i) => (
 
@@ -248,6 +255,10 @@ const AddProduct = () => {
                                             id={i}
                                             className='hidden'
                                         />
+                                        <span onClick={() => removeImage(i)} className="p-2 z-10 cursor-pointer bg-slate-700 hover:shadow-lg hover:shadow-slate-400/50 text-white absolute top-1 right-1 rounded-full">
+                                            <IoMdCloseCircle />
+                                        </span>
+
                                     </div>
                                 ))
                             }
@@ -259,6 +270,12 @@ const AddProduct = () => {
                             </label>
                             <input className='hidden' onChange={imageHandle} multiple type="file" id='image' />
                         </div>
+                        <div>
+                            <button className="bg-red-500  hover:shadow-red-500/40 hover:shadow-md text-white rounded-md px-7 py-2 my-2">
+                                Add Product
+                            </button>
+                        </div>
+
 
                     </form>
 
