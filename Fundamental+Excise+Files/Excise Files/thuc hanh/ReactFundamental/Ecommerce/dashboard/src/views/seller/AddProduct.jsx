@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { IoMdImages } from 'react-icons/io';
 import { Link } from 'react-router-dom';
 
 
@@ -52,6 +53,15 @@ const AddProduct = () => {
             setAllCategory(categorys);
         }
 
+    }
+    const [images, setImages] = useState([]);
+    const [imageShow, setImageShow] = useState(false);
+    const imageHandle = (e) => {
+        const files = e.target.files;
+        const length = files.length;
+        if (length > 0) {
+            setImages([...images, ...files])
+        }
     }
 
     const inputHandle = (e) => {
@@ -204,6 +214,16 @@ const AddProduct = () => {
                                 rows="4"
                             />
                         </div>
+
+
+                        <div className='grid lg:grid-cols-4 grid-cols-1 md:grid-cols-3 sm:grid-cols-2 sm:gap-4 md:gap-4 gap-3 w-full text-[#d0d2d6] mb-4'>
+                            <label className='flex justify-center items-center flex-col h-[180px] cursor-pointer border border-dashed hover:border-red-500 w-full text-[#d0d2d6]' htmlFor="image">
+                                <span><IoMdImages /></span>
+                                <span>Select Image</span>
+                            </label>
+                            <input className='hidden' onChange={imageHandle} multiple type="file" id='image' />
+                        </div>
+
                     </form>
 
                 </div>
