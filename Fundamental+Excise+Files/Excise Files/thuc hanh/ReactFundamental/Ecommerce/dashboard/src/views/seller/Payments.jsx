@@ -2,9 +2,37 @@ import React from 'react';
 import { FaCartArrowDown, FaUsers } from 'react-icons/fa';
 import { MdCurrencyExchange, MdProductionQuantityLimits } from 'react-icons/md';
 
+import { FixedSizeList as List } from 'react-window';
+import { forwardRef } from "react";
+
+function handleOnWheel(event) {
+    const { deltaY } = event;
+    console.log("handleOnWheel", deltaY);
+}
+
+const outerElementType = forwardRef((props, ref) => (
+    <div ref={ref} onWheel={handleOnWheel} {...props} />
+));
+
+
 
 
 const Payments = () => {
+    const array = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    const Row = ({ index, style }) => {
+        return (
+            <div style={style} className="flex text-sm font-medium text-[#d0d2d6]">
+                <div className="w-[25%] p-2 whitespace-nowrap">{index + 1}</div>
+                <div className="w-[25%] p-2 whitespace-nowrap">$3434</div>
+                <div className="w-[25%] p-2 whitespace-nowrap">
+                    <span className="py-[1px] px-[5px] bg-slate-700 text-blue-500 rounded-md text-sm">
+                        Pending
+                    </span>
+                </div>
+                <div className="w-[25%] p-2 whitespace-nowrap">25 dec 2025</div>
+            </div>
+        );
+    };
     return (
         <div div className='px-2 md:px-7 py-5' >
             <div className='w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-7 mb-5'>
@@ -63,7 +91,7 @@ const Payments = () => {
                                 <input
                                     min="0"
                                     type="number"
-                                    className="px-3 py-2 md:w-[79%] focus:border-indigo-200 outline-none bg-[#6a5fdf] border border-slate-700 rounded-md text-[#d0d2d6]"
+                                    className="px-3 py-2 md:w-[75%] focus:border-indigo-200 outline-none bg-[#6a5fdf] border border-slate-700 rounded-md text-[#d0d2d6]"
                                     name="amount"
                                 />
                                 <button
@@ -74,7 +102,66 @@ const Payments = () => {
                             </div>
                         </form>
                     </div>
+
+                    <div className='text-lg pb-4'>
+                        Pending request
+                    </div>
+
+
+                    <div className='w-full overflow-x-auto'>
+                        <div className='flex bg-[#a7a3de] uppercase text-xs min-w-[340px] font-bold rounded-md'>
+                            <div className="w-1/5 p-2">No</div>
+                            <div className="w-1/5 p-2">Amount</div>
+                            <div className="w-1/5 p-2">Status</div>
+                            <div className="w-1/5 p-2">Date</div>
+                        </div>
+                        {
+                            <List
+                                style={{ minWidth: '340px' }}
+                                className="List"
+                                height={350}
+                                itemCount={1000}
+                                itemSize={35}
+                                outerElementType={outerElementType}
+                            >
+                                {Row}
+                            </List>
+
+
+                        }
+                    </div>
                 </div>
+                <div className="bg-[#6a5fdf] text-[#d0d2d6] rounded-md p-5">
+                    <h2 className="text-lg mb-4">Success Withdrawal</h2>
+
+
+
+                    <div className='w-full overflow-x-auto'>
+                        <div className='flex bg-[#a7a3de] uppercase text-xs min-w-[340px] font-bold rounded-md'>
+                            <div className="w-1/5 p-2">No</div>
+                            <div className="w-1/5 p-2">Amount</div>
+                            <div className="w-1/5 p-2">Status</div>
+                            <div className="w-1/5 p-2">Date</div>
+                        </div>
+                        {
+                            <List
+                                style={{ minWidth: '340px' }}
+                                className="List"
+                                height={350}
+                                itemCount={1000}
+                                itemSize={35}
+                                outerElementType={outerElementType}
+                            >
+                                {Row}
+                            </List>
+
+
+                        }
+                    </div>
+                </div>
+
+
+
             </div>
 
 
