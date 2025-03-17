@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaImages } from 'react-icons/fa';
+import { FaImages, FaRegEdit } from 'react-icons/fa';
 import { FadeLoader } from 'react-spinners';
 const Profile = () => {
 
@@ -45,6 +45,31 @@ const Profile = () => {
                             <input type="text" className='hidden' id='img' />
 
                         </div>
+
+                        <div className='px-0 md:px-5 py-2'>
+                            <div className='flex justify-between text-sm flex-col gap-2 p-4 bg-slate-800 rounded-md relative'>
+                                <span className='p-[6px] bg-yellow-500 rounded hover:shadow-lg hover:shadow-yellow-500/50 absolute right-2 top-2 cursor-pointer'>
+                                    <FaRegEdit />
+                                </span>
+                                <div className='flex gap-2'>
+                                    <span>Name :</span>
+                                    <span>Ariyan Khan</span>
+                                </div>
+                                <div className='flex gap-2'>
+                                    <span>Email :</span>
+                                    <span>ngotrongliem2004@gmail.com</span>
+                                </div>
+                                <div className='flex gap-2'>
+                                    <span>Role :</span>
+                                    <span>Seller</span>
+                                </div>
+                                <div className='flex gap-2'>
+                                    <span>payment acount :</span>
+                                    <span>Pending</span>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
