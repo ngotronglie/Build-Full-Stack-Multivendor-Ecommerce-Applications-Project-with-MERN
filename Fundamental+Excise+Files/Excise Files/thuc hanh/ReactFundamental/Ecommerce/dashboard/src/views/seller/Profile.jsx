@@ -5,6 +5,8 @@ const Profile = () => {
 
     const image = true
     const loader = true
+    const status = 'active'
+    const userInfo = true
     return (
         <div className="px-2 lg:px-7 py-5">
             <div className="w-full flex flex-wrap">
@@ -65,10 +67,74 @@ const Profile = () => {
                                 </div>
                                 <div className='flex gap-2'>
                                     <span>payment acount :</span>
-                                    <span>Pending</span>
+                                    <p>
+                                        {
+                                            status === 'active' ? (
+                                                <span className='bg-green-500 text-white text-sx cursor-pointer font-normal ml-2 px-2 py-0.5 rounded'>Active</span>
+                                            ) : (
+                                                <span className='bg-red-500 text-white text-sx cursor-pointer font-normal ml-2 px-2 py-0.5 rounded'>Deactive</span>
+                                            )
+                                        }
+                                    </p>
                                 </div>
                             </div>
                         </div>
+
+
+                        <div className='px-0 md:px-5 py-2'>
+                            {
+                                !userInfo && (
+                                    <form>
+                                        <div className='flex flex-col w-full gap-1 mb-2'>
+                                            <label htmlFor="shop">shop Name</label>
+                                            <input
+                                                className='px-4 py-2 focus:border-indigo-200 outline-none bg-[#6a5fdf] border border-slate-700 rounded-md text-[#d0d2d6]'
+                                                type="text"
+                                                name="shopName"
+                                                id="shop"
+                                                placeholder="shop Name"
+                                            />
+                                        </div>
+                                        <div className='flex flex-col w-full gap-1 mb-2'>
+                                            <label htmlFor="division">Division Name</label>
+                                            <input
+                                                className='px-4 py-2 focus:border-indigo-200 outline-none bg-[#6a5fdf] border border-slate-700 rounded-md text-[#d0d2d6]'
+                                                type="text"
+                                                name="division"
+                                                id="division"
+                                                placeholder="division Name"
+                                            />
+                                        </div>
+                                        <div className='flex flex-col w-full gap-1 mb-2'>
+                                            <label htmlFor="district"> district Name</label>
+                                            <input
+                                                className='px-4 py-2 focus:border-indigo-200 outline-none bg-[#6a5fdf] border border-slate-700 rounded-md text-[#d0d2d6]'
+                                                type="text"
+                                                name="district"
+                                                id="district"
+                                                placeholder="district Name"
+                                            />
+                                        </div>
+                                        <div className='flex flex-col w-full gap-1 mb-2'>
+                                            <label htmlFor="subdis">Sub district Name</label>
+                                            <input
+                                                className='px-4 py-2 focus:border-indigo-200 outline-none bg-[#6a5fdf] border border-slate-700 rounded-md text-[#d0d2d6]'
+                                                type="text"
+                                                name="subdis"
+                                                id="subdis"
+                                                placeholder="sub district Name"
+                                            />
+                                        </div>
+                                        <button className='bg-red-500 hover:shadow-red-500/40 hover:shadow-md text-white rounded-md px-7 py-2 my-2'>
+                                            Save Changes
+                                        </button>
+
+                                    </form>
+                                )
+                            }
+
+                        </div>
+
 
                     </div>
                 </div>
