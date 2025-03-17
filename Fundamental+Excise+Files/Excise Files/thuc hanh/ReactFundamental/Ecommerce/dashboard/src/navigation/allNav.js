@@ -118,5 +118,12 @@ export const allNav = [
         path: '/seller/dashboard/chat-support',
         icon: <AiOutlineDashboard />,
         role: 'seller',
+    },
+    {
+        id: 17,
+        title: 'Profile',
+        path: '/seller/dashboard/profile',
+        icon: <AiOutlineDashboard />,
+        role: 'seller',
     }
 ];
