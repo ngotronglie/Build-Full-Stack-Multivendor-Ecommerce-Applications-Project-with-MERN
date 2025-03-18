@@ -5,6 +5,7 @@ import {lazy} from 'react';
 const Home = lazy(()=>import('./../../views/Home') )
 const SellerDashboard = lazy(()=>import('./../../views/seller/SellerDashboard') )
 const AddProduct = lazy(()=>import('./../../views/seller/AddProduct') )
+const EditProduct = lazy(()=>import('./../../views/seller/EditProduct') )
 const Products = lazy(()=>import('./../../views/seller/Products') )
 const DiscountProducts = lazy(()=>import('./../../views/seller/DiscountProducts') )
 const Orders = lazy(()=>import('./../../views/seller/Orders') )
@@ -24,6 +25,12 @@ export const sellerRoutes = [
     {
         path : '/seller/dashboard',
         element: <SellerDashboard/>,
+        role: 'seller',
+        status: 'active'
+    }
+    ,{
+        path : '/seller/dashboard/edit-product/:productId',
+        element: <EditProduct/>,
         role: 'seller',
         status: 'active'
     }
