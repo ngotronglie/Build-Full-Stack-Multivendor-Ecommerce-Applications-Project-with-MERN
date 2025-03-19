@@ -38,7 +38,7 @@ const AdminLogin = () => {
         margin: "0 auto",
         height: '24px',
         justifyContent: 'center',
-        alignItem: 'center',
+        alignItems: 'center',
     }
 
 
